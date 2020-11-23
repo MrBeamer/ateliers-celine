@@ -1,14 +1,15 @@
 Rails.application.routes.draw do
+  devise_for :models
   devise_for :users
   root to: 'pages#home'
-  
+
   resources :workshops, only: [:index, :show] do
     member do
       get :instructions
     end
   end
 
-  resources :dashboard, only: [:index]
+  resources :dashboards, only: [:index]
 
   resources :subscriptions, only: [:new, :create]
 
