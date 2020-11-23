@@ -1,5 +1,18 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  
+  resources :workshops, only: [:index, :show] do
+    member do
+      get :instructions
+    end
+  end
+
+  resources :dashboard, only: [:index]
+
+  resources :subscriptions, only: [:new, :create]
+
 end
+
+# create custom route with custom controller and custom action
+# get "dashboard", to: "dashboard#index", as: :dashboard
