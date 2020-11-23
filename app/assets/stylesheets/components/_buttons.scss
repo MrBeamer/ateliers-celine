@@ -1,0 +1,60 @@
+.button-pink {
+  background-color: #C41A49;
+  font-weight: bolder;
+  color: white;
+  padding: 10px 40px;
+  border-radius: 5px;
+}
+.button-pink:hover {
+  color: white;
+  text-decoration: none;
+  box-shadow: 2px 2px 3px rgba(50, 50, 50, 0.4);
+}
+
+.button-yellow {
+  background-color: #DAB300;
+  font-weight: bolder;
+  color: #C41A49;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 3px rgba(50, 50, 50, 0.4);
+  text-shadow: 2px 2px 2px rgba(50, 50, 50, 0.4);
+}
+.button-yellow:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.button-minimal {
+  background-color: #FFFAFA;
+  color: #C41A49;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border-color: #C41A49;
+  border: solid;
+  border-width: 1px;
+  font-weight: bolder;
+}
+.button-minimal:hover {
+  text-decoration: none;
+  border-color: #C41A49;
+  background: #F6EDED;
+  border: solid;
+  border-width: 1px;
+  color: #C41A49;
+}
+
+.button-minimal-thicker{
+border: 3px solid #C41A49;
+box-sizing: border-box;
+border-radius: 5px;
+padding: 3px 30px;
+color: #C41A49;
+font-weight: bolder;
+background: white;
+}
+.button-minimal-thicker:hover {
+  text-decoration: none;
+  color: #C41A49;
+  background: #DAB300;
+}
