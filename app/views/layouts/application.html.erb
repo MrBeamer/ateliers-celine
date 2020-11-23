@@ -4,7 +4,9 @@
     <title>AteliersCeline</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <!--Added Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
@@ -12,9 +14,23 @@
   </head>
 
   <body>
-    <%= render 'shared/navbar' %>
-    <%= render 'shared/flashes' %>
-
-    <%= yield %>
+    <div class="page-container">
+      <div class="navbar-container">
+        <%= render "shared/navbar" %>
+      </div>
+      <div class="content-container">
+        <%= yield %>
+        <%=  render 'shared/flashes' %>
+      </div>
+      <div class="footer-container">
+        <%= render "shared/footer" %>
+      </div>
+    </div>
   </body>
 </html>
+
+
+<!--     render 'shared/navbar' %>
+    render 'shared/flashes' %>
+    render 'shared/footer' %>
+    yield %> -->

@@ -10,3 +10,40 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+
+
+.nav-own {
+font-family: 'Montserrat', sans-serif;
+font-size: 24px;
+font-weight: 700;
+}
+
+
+.nav-img {
+  height: auto;
+  width: auto;
+  // "https://res.cloudinary.com/dxdboxbyb/image/upload/v1606155677/atelier-celine/xtnumel8ux618dntifyn.jpg"
+}
+
+.nav-link{
+  color: black!important;
+
+}
+
+.pad {
+  padding-right: 140px !important;
+}
+
+.nav-link:hover {
+color: #C41A49 !important;
+
+}
+
+.button-nav {
+  border: 1px solid #C41A49;
+  border-radius: 20px;
+  text-align: center !important;
+  margin-right: 140px;
+  padding: 0 5px;
+}
