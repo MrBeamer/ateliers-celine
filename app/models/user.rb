@@ -3,4 +3,13 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+
+  has_many :subscriptions
+  has_many :workshops
+  
+  validates :username, :first_name, :last_name, :country, :city, :state, :postcode, :street, presence: true
+  validates :username, uniquness: true
+  validates_format_of :country, :city, :state, with: /^\D+$/i
+  # TODO: validation of phone number with regex. Look up in excercise @Michael
+
 end
