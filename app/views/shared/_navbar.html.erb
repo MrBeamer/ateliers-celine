@@ -1,5 +1,5 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon nav-own">
-  <%= link_to "#", class: "navbar-brand" do %>
+  <%= link_to "/", class: "navbar-brand" do %>
     <%= image_tag "https://res.cloudinary.com/dxdboxbyb/image/upload/v1606156054/atelier-celine/jublitpripa5ijbpcoxt.jpg", class: "nav-img" %>
     <% end %>
 
@@ -12,9 +12,6 @@
       <% if user_signed_in? %>
         <li class="nav-item active">
           <%= link_to "Home", "#", class: "nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Messages", "#", class: "nav-link" %>
         </li>
         <li class="nav-item dropdown">
           <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
@@ -35,7 +32,7 @@
           <%= link_to "Login", new_user_session_path, class: "nav-link pad" %>
         </li>
         <li class="nav-item button-nav">
-          <%= link_to "Sign up", new_user_session_path, class: "nav-link" %>
+          <%= link_to "Sign up", new_user_registration_path, class: "nav-link" %>
         </li>
       <% end %>
     </ul>

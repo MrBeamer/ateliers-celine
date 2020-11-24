@@ -1,13 +1,14 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
 
-User.destroy_all
+
+puts 'Cleaning database now...'
+# S.destroy_all
 Workshop.destroy_all
+User.destroy_all
+puts 'Database clean ✅'
+
 
 # Users
 michael = User.create!(
@@ -33,7 +34,11 @@ workshop = Workshop.create!(
   YUKO // JAPAN
   After working with publishers and gaming companies for 5 years, Yukos career shifted to beeing a visual artist in Berlin. For her Cyanotype is a great way to transform a digital image into real life. Yuko is excited to share her knowledge about digital negatives and the science behind cyanotype with you.",
   origins_description: "Cyanotype is a 170 year old photographic printing process that produces prints in a distinctive dark greenish-blue. The word cyan comes from the Greek, meaning  “dark blue substance.”
-  The process was invented by Sir John Herschel, a brilliant astronomer and scientist, in 1842. 
+  The process was invented by Sir John Herschel, a brilliant astronomer and scientist, in 1842.
   However, Herschel did not use cyanotype for photography, but for reproducing notes. It was a family friend, the botanist Anna Atkins, who used the cyanotype printing process in 1843 to create an album of algae specimens. She created the images by placing objects directly on photosensitive paper. She is regarded as the first female photographer.",
-  category: "traditional"
+  category: "traditional",
+  user: User.last
 )
+
+  puts "Complete, created #{User.count} user."
+  puts "Complete, created #{Workshop.count} workshops."
