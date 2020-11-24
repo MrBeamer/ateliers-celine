@@ -30,7 +30,7 @@
 
 .red-line {
   margin-bottom: 20px;
-  margin-top: 25px;
+  margin-top: 15px;
 }
 
 .banner-small h3 {
@@ -75,7 +75,7 @@
 
 .bulletins {
   padding-top: 30px;
-  // display: flex;
+  display: flex;
   // margin-left: 40px;
   padding-bottom: 30px;
 }
@@ -94,7 +94,7 @@
 }
 
 img.imgage-discription  {
-  width: 50%;
+  width: 658px;
 }
 
 .workshop-discription{
@@ -104,4 +104,24 @@ img.imgage-discription  {
 .center{
   margin-left: 40px;
   margin-right: 40px;
+}
+
+
+
+.workshop-box {
+  display: flex;
+
+}
+
+
+.workshop-discription h4 {
+margin-top: 60px;
+}
+
+.workshop-content-right {
+margin-left: 50px;
+}
+
+.workshop-content-left {
+  margin-right: 50px;
 }
