@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
-  devise_for :models
   devise_for :users
   root to: 'pages#home'
 
-  resources :workshops, only: [:index, :show] do
+  resources :workshops, only: [:index, :show, :update] do
     member do
       get :instructions
     end

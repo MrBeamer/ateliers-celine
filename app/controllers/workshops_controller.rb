@@ -1,4 +1,6 @@
 class WorkshopsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [ :show, :index ]
+
   def index
     @workshops = policy_scope(Workshop).order(created_at: :desc)
   end
@@ -6,5 +8,17 @@ class WorkshopsController < ApplicationController
   def show
     @workshop = Workshop.find(params[:id])
     authorize @workshop
+  end
+
+  def update
+    @workshop = Workshop.find(params[:id])
+    authorize @workshop
+    @workshop.update(workshop_content_params)
+    @workshop.save
+  end
+
+  private 
+  def workshop_content_params
+    params.require(:workshop).permit(:workshop_content)
   end
 end
