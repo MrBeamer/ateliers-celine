@@ -1,2 +1,15 @@
 <h1>Workshops#show</h1>
 <p>Find me in app/views/workshops/show.html.erb</p>
+
+
+<%= simple_form_for(@workshop) do |f| %>
+
+  <div class="form-inputs">
+    <%= f.rich_text_area :workshop_content %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
+

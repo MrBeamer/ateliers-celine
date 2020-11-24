@@ -43,6 +43,7 @@ end
 
 # custom gems
 gem 'pundit'
+gem 'image_processing', '~> 1.2'
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.

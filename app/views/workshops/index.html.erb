@@ -1,2 +1,18 @@
 <h1>Workshops#index</h1>
 <p>Find me in app/views/workshops/index.html.erb</p>
+
+<div class="cards">
+  <% @workshops.each do |workshop| %>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url()">
+      <p>
+        <%= workshop.name %>
+        <br>
+        <%= workshop.workshop_description %>
+        <br>
+        <%= workshop.artist_description %>
+        <%= workshop.workshop_content %>
+      </p>
+    </div>
+  <% end %>
+</div>
+
