@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   resources :dashboards, only: [:index]
 
-  resources :subscriptions, only: [:new, :create]
+  resources :subscriptions, only: [:index, :new, :create]
 
 end
 
