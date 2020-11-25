@@ -1,3 +1,5 @@
+
+// index cards
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -17,13 +19,7 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
-.card-header {
-  display: flex;
-  align-items: center;
-  background-color: transparent;
-  border-bottom: none;
-  padding: 0;
-}  
+
 
 .card-category-img {
   width: 80px;
@@ -39,7 +35,7 @@
   padding: 20px 0px;
   img {
     width: 208px;
-    height: 130px; 
+    height: 150px;
     border-radius: 10px;
   }
 }
@@ -49,6 +45,19 @@
  text-align: center;
 }
 
+.card-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border-bottom: none;
+  padding: 0;
+}
+
+.card-text p {
+padding-bottom: 7px;
+}
 
 
 

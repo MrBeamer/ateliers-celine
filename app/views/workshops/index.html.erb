@@ -16,7 +16,7 @@
     <br>
     <br>
     <h4>Discover Bea Bonafini painting techniques to transform your home in a contemporary exhibition</h4>
-    <%= link_to "Join Now", workshops_path, class: "button-pink" %>
+    <%= link_to "Join Now", subscriptions_path, class: "button-pink" %>
   </div>
 </div>
 
@@ -50,15 +50,10 @@
     <div class="card-workshop">
 
       <div class="card-header">
-
-        <div class="card-category-img">
-          <img src="https://res.cloudinary.com/yileijiang/image/upload/v1606299331/ateliers%20celine/image_153_jkjboe.png" alt="traditional">
-        </div>
-
         <div class="card-text">
           <p><%= workshop.name %></p>
-          <p>Ateliers</p>
-          <p><%= workshop.user.first_name %></p> 
+          <!-- <p>Ateliers</p> -->
+          <p><%= workshop.user.first_name %></p>
           <p style="font-size: 15px; color: #455CC7; font-weight: bold;"><%= workshop.category.upcase %></p>
         </div>
 
@@ -68,7 +63,7 @@
         <img src="https://res.cloudinary.com/yileijiang/image/upload/v1606303514/ateliers%20celine/lenephoto005_kgror8.jpg" alt="workshop">
       </div>
 
-      <div class="card-button"> 
+      <div class="card-button">
         <%= link_to "Discover", workshop_path(workshop), class: "button-minimal-thicker" %>
       </div>
 
