@@ -1,4 +1,9 @@
 class SubscriptionsController < ApplicationController
+
+  def index
+    @subscriptions = policy_scope(Subscription)
+  end
+
   def new
     @subscription = Subscription.new(subscription_params)
      authorize @subscription
