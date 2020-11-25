@@ -1,3 +1,4 @@
+// Banner Section
 .banner-small {
   background-color: #C5314B;
   height: 640px;
@@ -73,6 +74,15 @@
   height: 640px
 }
 
+
+// 1 Section
+
+.center h4 {
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 36px;
+  color: #455CC7;
+}
+
 .bulletins {
   padding-top: 30px;
   display: flex;
@@ -124,4 +134,29 @@ margin-left: 50px;
 
 .workshop-content-left {
   margin-right: 50px;
+}
+
+.experience-icons {
+  display:flex;
+  font-size: 60px;
+  color: #455CC7;
+  margin-top: 20px;
+}
+
+.experience-icons p {
+font-size: 22px;
+color: #C41A49;
+}
+
+
+.center-icon-experience {
+  text-align: center;
+  margin-right: 50px;
+}
+
+
+// 3 Section - Physical Kit
+
+.kit-images {
+
 }
