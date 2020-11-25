@@ -1,6 +1,13 @@
-.card-category {
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
 
-  height: 300px;
+.card-workshop {
+  padding: 35px 20px;
+  height: 370px;
+  width: 250px;
   border-style: solid;
   border-width: 1px;
   border-color: lightgrey;
@@ -10,11 +17,41 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
-.cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
+.card-header {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border-bottom: none;
+  padding: 0;
+}  
+
+.card-category-img {
+  width: 80px;
 }
+
+.card-text {
+  p {
+    line-height: 7px;
+  }
+}
+
+.card-img-workshop {
+  padding: 20px 0px;
+  img {
+    width: 208px;
+    height: 130px; 
+    border-radius: 10px;
+  }
+}
+
+.card-button {
+ margin: 0 auto;
+ text-align: center;
+}
+
+
+
+
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
   .cards {
