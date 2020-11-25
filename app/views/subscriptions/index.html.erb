@@ -1,0 +1,20 @@
+<p id="test" data-duration ="2">Select</p>
+
+
+
+<div id="selections">
+ <p>Here</p>
+
+  </div>
+  <p>Here</p>
+</div>
+
+ 
+
+<%= simple_form_for(@subscription) do |f| %>
+  <%= f.association :workshops,
+                  as: :check_boxes,
+                  input_html: { class: "tag-selector" },
+                  item_wrapper_class: 'tag-item' %>
+  <%= f.button :submit %>
+<% end %>
