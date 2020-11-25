@@ -40,33 +40,20 @@
       <img class="red-line" src="https://res.cloudinary.com/dxdboxbyb/image/upload/v1606232604/atelier-celine/Landing%20Page/cluepznhimc95jwz0ono.png" alt="">
     </div>
   </div>
-
-  <div class="button-show-bottom">
-    <%= link_to "Join Now", workshops_path, class: "button-show"%>
-  </div>
 </div>
 
 
 
-
-
-<p id="test" data-duration ="2">Select</p>
-
-
-
-<div id="selections">
- <p>Here</p>
-
-  </div>
-  <p>Here</p>
-</div>
-
- 
-
+<div class="selector-cards" >
 <%= simple_form_for(@subscription) do |f| %>
-  <%= f.association :workshops,
+      <%= f.association :workshops,
                   as: :check_boxes,
                   input_html: { class: "tag-selector" },
                   item_wrapper_class: 'tag-item' %>
-  <%= f.button :submit %>
+  <%= f.button :submit, class: "button-blue" %>
 <% end %>
+</div>
+
+ <div class="button-show-bottom">
+    <%= link_to "Join Now", workshops_path, class: "button-show"%>
+  </div>
