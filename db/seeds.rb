@@ -32,7 +32,7 @@ workshop = Workshop.create!(
   The process was invented by Sir John Herschel, a brilliant astronomer and scientist, in 1842.
   However, Herschel did not use cyanotype for photography, but for reproducing notes. It was a family friend, the botanist Anna Atkins, who used the cyanotype printing process in 1843 to create an album of algae specimens. She created the images by placing objects directly on photosensitive paper. She is regarded as the first female photographer.",
   category: "Traditional",
-  user: user_id: User.last.id
+  user_id: User.last.id
 )
 
 workshop = Workshop.create!(
