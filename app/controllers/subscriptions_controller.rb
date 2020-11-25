@@ -1,11 +1,13 @@
 class SubscriptionsController < ApplicationController
 
   def index
-    @subscriptions = policy_scope(Subscription)
+    @subscriptions = policy_scope(Subscription).order(created_at: :desc)
+    @workshops = policy_scope(Workshop).order(created_at: :desc)
+    @subscription = Subscription.new()
   end
 
   def new
-    @subscription = Subscription.new(subscription_params)
+    @subscription = Subscription.new
      authorize @subscription
   end
 
