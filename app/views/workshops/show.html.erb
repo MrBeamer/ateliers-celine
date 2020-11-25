@@ -1,11 +1,11 @@
 <div class="banner-small">
   <div>
-    <h1><%= @workshop.name %></h1>
+    <h1><%= @workshop.name%></h1>
     <h2>Atelier</h2>
     <img class="blue-line" src="https://res.cloudinary.com/dxdboxbyb/image/upload/v1606232604/atelier-celine/Landing%20Page/lqztsqrpdeth0ncdjkk6.png" alt="">
     <h3>DIMI & YUKO</h3>
     <p>You will explore the ancient technique of Cyanotype re-interpreted by our creative master Dimi and Yuko.</p>
-    <%= link_to "Join Now", workshops_path, class: "button-show"%>
+    <%= link_to "Join Now", subscriptions_path, class: "button-show"%>
   </div>
   <div class="show-image">
     <div>
@@ -110,7 +110,7 @@
     <img id="kit-image" src="https://res.cloudinary.com/dxdboxbyb/image/upload/v1606304140/atelier-celine/Landing%20Page/hmeuk5ndwch1k2dtr1sp.png" alt="Art Kit">
   </div>
   <div class="button-show-bottom">
-    <%= link_to "Join Now", workshops_path, class: "button-show"%>
+    <%= link_to "Join Now", subscriptions_path, class: "button-show"%>
   </div>
 </div>
 
@@ -148,12 +148,29 @@
   </div>
 </div>
 
-<div class="workshop-discription">
-  <div class="workshop-content-left">
+<div class="center">
+  <div class="headline-box">
+  <div>
     <h4>What Crafter’s Say’s? </h4>
     <img class="red-line" src="https://res.cloudinary.com/dxdboxbyb/image/upload/v1606232604/atelier-celine/Landing%20Page/cluepznhimc95jwz0ono.png" alt="">
   </div>
+  <div class="reviews">
+  <div class="review">
+    <p>Amazing workshop, the output was outstanding and I had so much fun with my boyfriend</p>
+    <p class="review-username">Maria</p>
+  </div>
+    <div class="review">
+    <p>Once you learn the technique is incredible how easy you can re-apply it over and over</p>
+    <p class="review-username">Tom</p>
+  </div>
+    <div class="review">
+    <p>Dimi and Yuko were so inspiring, they made me travel to japan through the video. Thank you again!</p>
+    <p class="review-username">Lori</p>
+  </div>
+  </div>
 </div>
+</div>
+
 
 
 
