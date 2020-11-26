@@ -1,3 +1,24 @@
+<script type="text/javascript">
+
+function checkboxlimit(checkgroup, limit){
+	for (let i=0; i<checkgroup.length; i++){
+		checkgroup[i].onclick=function(){
+		let checkedcount=0;
+		for (let i=0; i<checkgroup.length; i++)
+			checkedcount+=(checkgroup[i].checked)? 1 : 0;
+		if (checkedcount>limit){
+			alert("You can only select a maximum of "+limit+" checkboxes");
+			this.checked=false;
+			};
+		};
+	};
+};
+
+</script>
+
+
+
+
 <div class="subscription-banner">
 
   <div class="subscription-title">
@@ -47,9 +68,10 @@
 <div class="selector-cards" >
 <%= simple_form_for(@subscription) do |f| %>
       <%= f.association :workshops,
-                  # as: :check_boxes,
-                  as: :radio_buttons,
-                  input_html: { class: "tag-selector" },
+                  as: :check_boxes,
+                  # as: :radio_buttons,
+                  input_html: { class: "tag-selector", name: 'workshops' },
+                  
                   item_wrapper_class: 'tag-item' %>
   <%= f.button :submit, class: "button-blue" %>
 <% end %>
@@ -58,3 +80,11 @@
  <div class="button-show-bottom">
     <%= link_to "Join Now", workshops_path, class: "button-show"%>
   </div>
+
+
+<script type="text/javascript">
+
+//Syntax: checkboxlimit(checkbox_reference, limit)
+checkboxlimit(document.forms.new_subscription.workshops, 2)
+
+</script>
