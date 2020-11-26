@@ -8,9 +8,11 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :orders, only: [:show, :create]
+
   resources :dashboards, only: [:index]
 
-  resources :subscriptions, only: [:index, :new, :create]
+  resources :subscriptions, only: [:index, :new, :create, :show]
 
 end
 
