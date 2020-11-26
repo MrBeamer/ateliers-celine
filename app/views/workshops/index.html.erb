@@ -43,31 +43,22 @@
         <i class="fas fa-circle lightblue-ball"></i>
       <h5>CONTEMPORARY</h5>
     </div>
-</div>
-
-<div class="cards">
-  <% @workshops.each do |workshop| %>
-    <div class="card-workshop">
-
-      <div class="card-header">
-        <div class="card-text">
-          <p><%= workshop.name %></p>
-          <!-- <p>Ateliers</p> -->
-          <p><%= workshop.user.first_name %></p>
-          <p style="font-size: 15px; color: #455CC7; font-weight: bold;"><%= workshop.category.upcase %></p>
-        </div>
-
-      </div>
-
-      <div class="card-img-workshop">
-        <img src="https://res.cloudinary.com/yileijiang/image/upload/v1606303514/ateliers%20celine/lenephoto005_kgror8.jpg" alt="workshop">
-      </div>
-
-      <div class="card-button">
-        <%= link_to "Discover", workshop_path(workshop), class: "button-minimal-thicker" %>
-      </div>
-
-
     </div>
-  <% end %>
 </div>
+
+<div class="center">
+  <div class="index-cards">
+    <% @workshops.each do |workshop| %>
+      <div class="test">
+        <div class="index-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1602407069119-e0c6f1602e31?ixlib=rb-1.2.1&auto=format&fit=crop&w=1267&q=80)">
+          </div>
+            <p><%= workshop.name %></p>
+            <p><%= workshop.user.first_name %></p>
+            <p style="font-size: 15px; color: #455CC7; font-weight: bold;"><%= workshop.category.upcase %></p>
+            <%= link_to "Discover", workshop_path(workshop), class: "button-minimal-thicker" %>
+      </div>
+    <% end %>
+  </div>
+</div>
+<!-- https://images.unsplash.com/photo-1554668082-50d9cd32f406?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80
+ -->
