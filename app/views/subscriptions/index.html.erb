@@ -47,8 +47,8 @@
 <div class="selector-cards" >
 <%= simple_form_for(@subscription) do |f| %>
       <%= f.association :workshops,
-                  # as: :check_boxes,
-                  as: :radio_buttons,
+                   as: :check_boxes, legend_tag: false,
+                  # as: :radio_buttons, legend_tag: false,
                   input_html: { class: "tag-selector" },
                   item_wrapper_class: 'tag-item' %>
   <%= f.button :submit, class: "button-blue" %>
