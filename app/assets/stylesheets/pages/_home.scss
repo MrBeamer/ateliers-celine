@@ -11,7 +11,8 @@
 }
 
 
-.banner h1{
+//video
+.overlay h1{
 text-align:center;
 color: #FFFFFF;
 font-family: 'Montserrat', sans-serif !important;
@@ -19,10 +20,44 @@ font-size: 50px;
 margin-bottom: 23px;
 }
 
- #myVideo {
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
+
+
+video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+
 }
 
+
+.video-box\ { position:relative; }
+.video-box video {
+    position:relative;
+    z-index:0;
+}
+.overlay {
+    position:absolute;
+    top: 81px;
+    left: 420px;
+    z-index:1;
+}
+
+
+//bewlo video
+#landing-image-kit {
+height: 640px;
+margin-left: 30px;
+}
+
+#landing-image-print {
+height: 640px;
+margin-top: 50px;
+margin-bottom: 90px;
+}
+
+
+.landing-page-text{
+font-size: 24px;
+}
