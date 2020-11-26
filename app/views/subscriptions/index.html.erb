@@ -16,7 +16,7 @@
             <li><i class="fas fa-check"></i> A shipped kit of handmade tools & materials</li>
             <li><i class="fas fa-check"></i> A monthly Q&A with maker </li>
           </ul>
-          <a href="#" class="subscription-btn" id="1_month">Select</a>
+           <a href="#" id="one_month" class="subscription-btn">Select</a>
         </div>
 
         <div class="subscription-card">
@@ -27,7 +27,7 @@
             <li><i class="fas fa-check"></i> Three shipped kits of handmade tools & materials</li>
             <li><i class="fas fa-check"></i> A monthly Q&A with maker </li>
           </ul>
-          <a href="#" class="subscription-btn" id="3_months">Select</a>
+          <a href="#" class="subscription-btn" id="three_months">Select</a>
         </div>
 
       </div>
@@ -44,11 +44,12 @@
 
 
 
+
 <div class="selector-cards" >
 <%= simple_form_for(@subscription) do |f| %>
       <%= f.association :workshops,
                   as: :check_boxes,legend_tag: false,
-                  # as: :radio_buttons,legend_tag: false,
+                  #as: :radio_buttons,legend_tag: false,
                   input_html: { class: "tag-selector workshop" },
                   item_wrapper_class: 'tag-item' %>
   <%= f.button :submit, class: "button-blue" %>

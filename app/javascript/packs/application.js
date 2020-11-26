@@ -28,11 +28,13 @@ import "bootstrap";
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 import { checkboxlimit } from "./../components/form"
+import { change_form } from "./../components/change_form"
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
   checkboxlimit(document.getElementsByClassName("workshop"), 3)
+  change_form();
 });
 
 require("trix")
