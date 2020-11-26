@@ -49,8 +49,9 @@
 <div class="center">
   <div class="index-cards">
     <% @workshops.each do |workshop| %>
+     <% background_url = cl_image_path workshop.photo.key, width: 300, height: 400, crop: :fill %>
       <div class="test">
-        <div class="index-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1602407069119-e0c6f1602e31?ixlib=rb-1.2.1&auto=format&fit=crop&w=1267&q=80)">
+        <div class="index-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= background_url %>')">
           </div>
             <p><%= workshop.name %></p>
             <p><%= workshop.user.first_name %></p>
