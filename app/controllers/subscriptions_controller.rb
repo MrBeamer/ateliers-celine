@@ -15,15 +15,23 @@ class SubscriptionsController < ApplicationController
     @subscription = Subscription.new(subscription_params)
     authorize @subscription
     @subscription.user = current_user
-    # @subscription.start_date = Date.now
-      if @subscription.save!
-      # redirect_to @game
-      end
+    @subscription.save
+    if @subscription.workshops.count == 3
+      @subscription.start_date = Date.today
+      @subscription.duration = 3
+      # TODO: add end_date
+      @subscription.price = 185
+    else
+      @subscription.start_date = Date.today
+      @subscription.duration = 1
+      @subscription.price = 90
+    end
+    @subscription.save
   end
 
   private
 
   def subscription_params
-    params.require(:subscription).permit(:start_date, :end_date, :duration, :price, workshop_ids: [])
+    params.require(:subscription).permit(:start_date, :end_date, :duration, :price, :name, workshop_ids: [])
   end
 end

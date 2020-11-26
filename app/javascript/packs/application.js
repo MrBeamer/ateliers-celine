@@ -32,8 +32,7 @@ import { checkboxlimit } from "./../components/form"
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
-  checkboxlimit(document.forms.new_subscription.workshops, 3)
-
+  checkboxlimit(document.getElementsByClassName("workshop"), 3)
 });
 
 require("trix")
