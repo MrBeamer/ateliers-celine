@@ -3,4 +3,5 @@ class Subscription < ApplicationRecord
   has_many :subscription_workshops
   has_many :workshops, through: :subscription_workshops
   has_many :reviews
+  monetize :price_cents
 end
