@@ -10,16 +10,22 @@
   justify-content: center;
 }
 
+.center h5 {
+  font-size: 50px;
+  color: #455CC7;
+  margin-top: 90px;
+  margin-bottom: 20px;
+}
+
+
 
 //video
 .overlay h1{
 text-align:center;
 color: #FFFFFF;
-font-family: 'Montserrat', sans-serif !important;
 font-size: 50px;
 margin-bottom: 23px;
 }
-
 
 
 video {
@@ -30,7 +36,6 @@ video {
   left: 0;
 
 }
-
 
 .video-box\ { position:relative; }
 .video-box video {
@@ -46,18 +51,108 @@ video {
 
 
 //bewlo video
+
+#finger-print-box{
+
+}
+
+
 #landing-image-kit {
 height: 640px;
 margin-left: 30px;
 }
 
 #landing-image-print {
-height: 640px;
+height: 580px;
 margin-top: 50px;
 margin-bottom: 90px;
+margin-left: 250px;
 }
 
 
 .landing-page-text{
 font-size: 24px;
 }
+
+
+// cards
+.home-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  margin-bottom: 90px;
+  // position: relative;
+  // z-index: 20;
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .home-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .home-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .home-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .home-cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .home-cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+
+.home-card {
+  background-size: cover;
+  background-position: center;
+  height: 360px;
+  display: flex;
+  justify-content: left;
+  align-items: flex-end;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+
+.home-card p {
+margin-left: 20px;
+}
+
+
+
+.fa-heart {
+  // position: absolute;
+  // right: -180px;
+  // top: 10px;
+  // width: 200px;
+  // z-index: 100;
+  color: #C5314B;
+  // font-size: 14px;
+  margin-bottom: 23px;
+  margin-left: 20px;
+}
+
+

@@ -14,6 +14,8 @@ Rails.application.routes.draw do
 
   resources :subscriptions, only: [:index, :new, :create, :show]
 
+   # mount StripeEvent::Engine, at: '/stripe-webhooks'
+
 end
 
 # create custom route with custom controller and custom action
