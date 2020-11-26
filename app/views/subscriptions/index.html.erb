@@ -16,7 +16,7 @@
             <li><i class="fas fa-check"></i> A shipped kit of handmade tools & materials</li>
             <li><i class="fas fa-check"></i> A monthly Q&A with maker </li>
           </ul>
-          <a href="#" class="subscription-btn">Select</a>
+          <a href="#" class="subscription-btn" id="1_month">Select</a>
         </div>
 
         <div class="subscription-card">
@@ -27,7 +27,7 @@
             <li><i class="fas fa-check"></i> Three shipped kits of handmade tools & materials</li>
             <li><i class="fas fa-check"></i> A monthly Q&A with maker </li>
           </ul>
-          <a href="#" class="subscription-btn">Select</a>
+          <a href="#" class="subscription-btn" id="3_months">Select</a>
         </div>
 
       </div>
@@ -49,8 +49,7 @@
       <%= f.association :workshops,
                   as: :check_boxes,
                   # as: :radio_buttons,
-                  input_html: { class: "tag-selector", name: 'workshops' },
-                  
+                  input_html: { class: "tag-selector workshop" },
                   item_wrapper_class: 'tag-item' %>
   <%= f.button :submit, class: "button-blue" %>
 <% end %>
