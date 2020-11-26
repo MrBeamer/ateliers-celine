@@ -27,10 +27,12 @@ import "bootstrap";
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
+import { checkboxlimit } from "./../components/form"
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
+  checkboxlimit(document.forms.new_subscription.workshops, 3)
 
 });
 

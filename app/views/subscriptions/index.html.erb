@@ -1,24 +1,3 @@
-<script type="text/javascript">
-
-function checkboxlimit(checkgroup, limit){
-	for (let i=0; i<checkgroup.length; i++){
-		checkgroup[i].onclick=function(){
-		let checkedcount=0;
-		for (let i=0; i<checkgroup.length; i++)
-			checkedcount+=(checkgroup[i].checked)? 1 : 0;
-		if (checkedcount>limit){
-			alert("You can only select a maximum of "+limit+" checkboxes");
-			this.checked=false;
-			};
-		};
-	};
-};
-
-</script>
-
-
-
-
 <div class="subscription-banner">
 
   <div class="subscription-title">
@@ -82,9 +61,3 @@ function checkboxlimit(checkgroup, limit){
   </div>
 
 
-<script type="text/javascript">
-
-//Syntax: checkboxlimit(checkbox_reference, limit)
-checkboxlimit(document.forms.new_subscription.workshops, 2)
-
-</script>
