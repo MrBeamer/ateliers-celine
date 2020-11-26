@@ -47,9 +47,10 @@
 <div class="selector-cards" >
 <%= simple_form_for(@subscription) do |f| %>
       <%= f.association :workshops,
-                  # as: :check_boxes,
-                  as: :radio_buttons,
-                  input_html: { class: "tag-selector" },
+                  as: :check_boxes,
+                  # as: :radio_buttons,
+                  input_html: { class: "tag-selector", name: 'workshops' },
+                  
                   item_wrapper_class: 'tag-item' %>
   <%= f.button :submit, class: "button-blue" %>
 <% end %>
@@ -58,3 +59,5 @@
  <div class="button-show-bottom">
     <%= link_to "Join Now", workshops_path, class: "button-show"%>
   </div>
+
+
