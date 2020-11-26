@@ -1,0 +1,5 @@
+<%= form_tag orders_path do %>
+  <%= hidden_field_tag 'subscription_id', @subscription.id %>
+  <%= submit_tag 'Purchase', class: 'button-blue' %>
+<% end %>
+

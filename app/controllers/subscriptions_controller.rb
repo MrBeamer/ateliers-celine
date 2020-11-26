@@ -6,6 +6,11 @@ class SubscriptionsController < ApplicationController
     @subscription = Subscription.new()
   end
 
+  def show
+    @subscription = Subscription.find(params[:id])
+    authorize @subscription
+  end
+
   def new
     @subscription = Subscription.new
      authorize @subscription
@@ -27,6 +32,7 @@ class SubscriptionsController < ApplicationController
       @subscription.price = 90
     end
     @subscription.save
+    redirect_to subscription_path(@subscription)
   end
 
   private
