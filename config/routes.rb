@@ -14,6 +14,10 @@ Rails.application.routes.draw do
 
   resources :subscriptions, only: [:index, :new, :create, :show]
 
+  get 'faqs', to: "pages#faqs", as: :faqs
+  get 'terms_and_conditions', to: "pages#terms_and_conditions", as: :terms_and_conditions
+
+
 
   resources :orders, only: [:show, :create] do
     resources :payments, only: :new

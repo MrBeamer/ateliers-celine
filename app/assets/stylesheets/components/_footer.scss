@@ -8,6 +8,12 @@
   color: rgba(0,0,0,0.3);
 }
 
+.page-container {
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto;
+}
+
 .infos a{
   color:white;
   padding: 0 0;
