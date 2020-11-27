@@ -51,13 +51,13 @@
 <%= simple_form_for(@subscription) do |f| %>
       <%= f.association :workshops,
                   as: :check_boxes,legend_tag: false,
+                  # label_method: ->(workshop){"#{workshop.photo.key}"},
                   #as: :radio_buttons,legend_tag: false,
                   input_html: { class: "tag-selector workshop" },
                   item_wrapper_class: 'tag-item' %>
-  <%= f.button :submit, class: "button-blue" %>
+  <%= f.button :submit,"Confirm Selection", class: "button-blue" %>
 <% end %>
 </div>
-
 
 
 

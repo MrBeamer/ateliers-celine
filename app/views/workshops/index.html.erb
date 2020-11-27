@@ -53,7 +53,7 @@
       <div class="test">
         <div class="index-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= background_url %>')">
           </div>
-            <p><%= workshop.name %></p>
+            <p> <strong><%= workshop.name %></strong> </p>
             <p><%= workshop.user.first_name %></p>
             <p style="font-size: 15px; color: #455CC7; font-weight: bold;"><%= workshop.category.upcase %></p>
             <%= link_to "Discover", workshop_path(workshop), class: "button-minimal-thicker" %>

@@ -1,6 +1,19 @@
 // 1 Section
 
 // 2 Section
-.workshop-discription img {
-height: 100px;
+// .workshop-discription img {
+// height: 100px;
+// }
+
+.center-child {
+display: flex;
+flex-direcetion: column;
+justify-content: center;
+}
+
+
+.center-child p {
+font-size: 23px;
+margin-bottom: 40px;
+margin-top: 20px;
 }
