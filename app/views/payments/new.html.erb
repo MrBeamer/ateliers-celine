@@ -1,9 +1,11 @@
-<div class="container">
-  <div class="row py-4">
-    <div class="col">
-      <h1>Checkout summary</h1>
+<div class="center">
+  <div class="center-child">
+      <div class="workshop-discription">
+    <div class="workshop-content-left">
+      <h4>Checkout summary</h4>
+      <img class="red-line" src="https://res.cloudinary.com/dxdboxbyb/image/upload/v1606232604/atelier-celine/Landing%20Page/cluepznhimc95jwz0ono.png" alt="">
       <p>Purchase of <strong><%= @order.subscription.sku %></strong> for <strong><%= humanized_money_with_symbol @order.amount %></strong></p>
-      <button id="pay" class="button-blue">Pay</button>
+      <button id="pay" class="button-pink">Confirm Payment</button>
       <script src="https://js.stripe.com/v3/"></script>
       <script>
         const paymentButton = document.getElementById('pay');
@@ -16,4 +18,6 @@
       </script>
     </div>
   </div>
+  </div>
+
 </div>
