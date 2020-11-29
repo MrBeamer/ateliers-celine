@@ -3,7 +3,7 @@
     <h1><%= @workshop.name%></h1>
     <h2>Atelier</h2>
     <img class="blue-line" src="https://res.cloudinary.com/dxdboxbyb/image/upload/v1606232604/atelier-celine/Landing%20Page/lqztsqrpdeth0ncdjkk6.png" alt="">
-    <h3>DIMI & YUKO</h3>
+    <h3><%= @workshop.artist_name  %></h3>
     <p>You will explore the ancient technique of Cyanotype re-interpreted by our creative master Dimi and Yuko.</p>
     <%= link_to "Join Now", subscriptions_path, class: "button-show"%>
   </div>
