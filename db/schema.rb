@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_26_165026) do
+ActiveRecord::Schema.define(version: 2020_11_29_155309) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -133,6 +133,7 @@ ActiveRecord::Schema.define(version: 2020_11_26_165026) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "origins_description"
+    t.string "artist_name"
     t.index ["user_id"], name: "index_workshops_on_user_id"
   end
 

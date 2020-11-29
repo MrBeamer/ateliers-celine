@@ -59,3 +59,31 @@ background: white;
   color: white;
   background: #C41A49;
 }
+
+
+
+// login and sign up
+.button-pink-devise {
+  background-color: #C41A49;
+  font-weight: bolder;
+  color: white;
+  padding: 10px 40px;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  width: 100%;
+}
+.button-pink-devise:hover {
+  color: white;
+  opacity: 0.9;
+  text-decoration: none;
+  box-shadow: 2px 2px 3px rgba(50, 50, 50, 0.4);
+}
+
+.reset-width{
+width: 50%;
+}
+
+.reset-margin {
+margin-bottom: 20px;
+}
