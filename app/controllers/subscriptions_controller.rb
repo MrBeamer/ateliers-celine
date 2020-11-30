@@ -26,16 +26,19 @@ class SubscriptionsController < ApplicationController
       @subscription.duration = 3
       # TODO: add end_date
       @subscription.price = 185
-      @subscription.sku = "ThreeMonthPlan"
+      @subscription.sku = "Three Month Plan"
     else
       @subscription.start_date = Date.today
       @subscription.duration = 1
       @subscription.price = 90
-      @subscription.sku = "OneMonthPlan"
+      @subscription.sku = "One Month Plan"
     end
     @subscription.save
-    redirect_to subscription_path(@subscription)
+    redirect_to new_subscription_order_path(@subscription)
+    
   end
+
+ 
 
   def profile
     @user = current_user
@@ -49,4 +52,6 @@ class SubscriptionsController < ApplicationController
   def subscription_params
     params.require(:subscription).permit(:start_date, :end_date, :duration, :price, :name, :sku, workshop_ids: [])
   end
+
+
 end

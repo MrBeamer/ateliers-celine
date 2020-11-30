@@ -1,4 +1,4 @@
-<div class="my-container"> 
+<div class="container"> 
   
   <h1> My Profile </h1>
   <br>
@@ -12,7 +12,7 @@
 
     <div id="profile-description">
       <h5> <%= @user.username %></h5>
-      <% if @user.bio == "" %>
+      <% if @user.bio == "" || @user.bio==nil %>
         <p>Nothing here yet. Please update your bio.</p>
       <% else %>
         <p> <%= @user.bio %> </p>
