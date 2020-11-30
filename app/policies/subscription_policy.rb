@@ -16,5 +16,9 @@ class SubscriptionPolicy < ApplicationPolicy
   def show?
     return true
   end
+
+  def profile?
+    return true
+  end
   
 end
