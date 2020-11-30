@@ -9,18 +9,20 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :orders, only: [:show, :create]
 
   resources :dashboards, only: [:index]
 
-  resources :subscriptions, only: [:index, :new, :create, :show]
+  resources :subscriptions, only: [:index, :new, :create, :show] do
+    resources :orders, only: [:new, :create]
+  end
+
   get "profile", to: "subscriptions#profile", as: :profile
 
   get 'faqs', to: "pages#faqs", as: :faqs
   get 'terms_and_conditions', to: "pages#terms_and_conditions", as: :terms_and_conditions
 
 
-  resources :orders, only: [:show, :create] do
+  resources :orders, only: [:show] do
     resources :payments, only: :new
   end
   mount StripeEvent::Engine, at: '/stripe-webhooks'

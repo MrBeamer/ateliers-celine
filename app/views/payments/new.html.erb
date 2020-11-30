@@ -1,3 +1,4 @@
+
 <div class="center">
   <div class="center-child">
       <div class="workshop-discription">
@@ -21,3 +22,24 @@
   </div>
 
 </div>
+
+
+<% @order.subscription.workshops.each do |workshop| %>
+  <%= workshop.name %>
+ 
+  <%= cl_image_tag(workshop.photo.key, width: 590, height: 280, :radius=>10) %>
+<% end %>
+
+
+
+<%= @user.first_name %>
+<%= @user.last_name %>
+<%= @user.email %>
+
+<%= @user.country %>
+<%= @user.state %>
+<%= @user.street %>
+<%= @user.postcode %>
+<%= @user.city %>
+
+
