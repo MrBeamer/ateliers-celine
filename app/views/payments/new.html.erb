@@ -1,11 +1,46 @@
 
 <div class="center">
+    <div class="workshop-discription">
+    <div class="workshop-content-left">
+      <h4>Your Address</h4>
+      <img class="red-line" src="https://res.cloudinary.com/dxdboxbyb/image/upload/v1606232604/atelier-celine/Landing%20Page/cluepznhimc95jwz0ono.png" alt="">
+      <p> <strong>First name:</strong> <%= @user.first_name %> </p>
+      <p> <strong>Last name:</strong> <%= @user.last_name %> </p>
+      <p> <strong>Country:</strong> <%= @user.country %> </p>
+      <p> <strong>Address:</strong> <%= @user.street %> </p>
+      <p> <strong>State:</strong> <%= @user.state %> </p>
+      <p> <strong>Postcode:</strong> <%= @user.postcode %> </p>
+    </div>
+  </div>
+
+
+</div>
+
+
+<div class="center">
+    <div class="workshop-discription">
+    <div class="workshop-content-left">
+      <h4>Your Order</h4>
+      <img class="red-line" src="https://res.cloudinary.com/dxdboxbyb/image/upload/v1606232604/atelier-celine/Landing%20Page/cluepznhimc95jwz0ono.png" alt="">
+      <p><%= @order.subscription.sku %></strong> for <strong><%= humanized_money_with_symbol @order.amount %></strong></p>
+    </div>
+      <div class="workshop-order">
+ <% @order.subscription.workshops.each do |workshop| %>
+  <%= workshop.name %>
+  <%= cl_image_tag(workshop.photo.key, width: 590, height: 280, :radius=>10) %>
+<% end %>
+</div>
+  </div>
+
+
+</div>
+
+
+
+<div class="center">
   <div class="center-child">
       <div class="workshop-discription">
     <div class="workshop-content-left">
-      <h4>Checkout summary</h4>
-      <img class="red-line" src="https://res.cloudinary.com/dxdboxbyb/image/upload/v1606232604/atelier-celine/Landing%20Page/cluepznhimc95jwz0ono.png" alt="">
-      <p>Purchase of <strong><%= @order.subscription.sku %></strong> for <strong><%= humanized_money_with_symbol @order.amount %></strong></p>
       <button id="pay" class="button-pink">Confirm Payment</button>
       <script src="https://js.stripe.com/v3/"></script>
       <script>
@@ -24,22 +59,10 @@
 </div>
 
 
-<% @order.subscription.workshops.each do |workshop| %>
-  <%= workshop.name %>
- 
-  <%= cl_image_tag(workshop.photo.key, width: 590, height: 280, :radius=>10) %>
-<% end %>
 
 
 
-<%= @user.first_name %>
-<%= @user.last_name %>
-<%= @user.email %>
 
-<%= @user.country %>
-<%= @user.state %>
-<%= @user.street %>
-<%= @user.postcode %>
-<%= @user.city %>
+
 
 
