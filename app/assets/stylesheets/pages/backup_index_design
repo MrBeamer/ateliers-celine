@@ -24,3 +24,6 @@
     </div>
   <% end %>
 </div>
+
+
+#{link_to "Discover", workshop_path(workshop), class: "button-selector"}

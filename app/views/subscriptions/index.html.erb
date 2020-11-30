@@ -40,12 +40,7 @@
       <img class="red-line" src="https://res.cloudinary.com/dxdboxbyb/image/upload/v1606232604/atelier-celine/Landing%20Page/cluepznhimc95jwz0ono.png" alt="">
     </div>
   </div>
-
-
 </div>
-
-
-
 
 
 <div class="selector-cards" >
@@ -54,11 +49,10 @@
                   as: :check_boxes,legend_tag: false,
                   :label_method => lambda { |workshop|
                   "<div>
-                    #{cl_image_tag(workshop.photo.key, width: 590, height: 280, :radius=>10)}
+                    #{cl_image_tag(workshop.photo.key, width: 320, height: 280, :radius=>10)}
                     <p><strong>#{workshop.name}</strong></p>
                     <p>#{workshop.artist_name}</p>
                     <h4>#{workshop.category}</h4>
-                    #{link_to "Discover", workshop_path(workshop), class: "button-selector"}
                   </div>".html_safe
                   },
                   # label_method: ->(workshop){"#{workshop.photo.key}"},
