@@ -12,6 +12,9 @@
           <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
         <% end %>
 
+        <%= f.input :bio,
+                    hint: "Update your bio information",
+                    required: false %>
         <%= f.input :password,
                     hint: "leave it blank if you don't want to change it",
                     required: false,

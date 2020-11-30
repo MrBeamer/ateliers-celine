@@ -1,0 +1,38 @@
+
+
+#profile {
+  display: flex;
+}
+
+#profile-picture {
+  padding: 40px 0;
+  margin-right: 5rem;
+  img {
+    height: 400px;
+    width: 300px;
+    border-radius: 5px;
+  }
+}
+
+#profile-description {
+  width: 30rem;
+  padding: 40px 0;
+  border-radius: 5px;
+}
+
+#profile-address {
+  margin-top: 218px;
+}
+
+h1 {
+  color: #455CC7;
+}
+
+i {
+  color: #455CC7;
+  margin-right: 7px;
+}
+
+.my-workshops {
+  padding-top: 40px;
+}
