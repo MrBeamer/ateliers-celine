@@ -1,7 +1,7 @@
 class OrdersController < ApplicationController
 before_action :skip_authorization
 
-  def create
+  def new
     subscription = Subscription.find(params[:subscription_id])
     order = Order.create!(subscription: subscription, subscription_sku: subscription.sku, amount: subscription.price, state: 'pending', user: current_user)
 
