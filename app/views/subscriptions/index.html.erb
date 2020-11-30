@@ -47,10 +47,20 @@
 
 
 
+
 <div class="selector-cards" >
 <%= simple_form_for(@subscription) do |f| %>
       <%= f.association :workshops,
                   as: :check_boxes,legend_tag: false,
+                  :label_method => lambda { |workshop|
+                  "<div>
+                    #{cl_image_tag(workshop.photo.key, width: 590, height: 280, :radius=>10)}
+                    <p><strong>#{workshop.name}</strong></p>
+                    <p>#{workshop.artist_name}</p>
+                    <h4>#{workshop.category}</h4>
+                    #{link_to "Discover", workshop_path(workshop), class: "button-selector"}
+                  </div>".html_safe
+                  },
                   # label_method: ->(workshop){"#{workshop.photo.key}"},
                   #as: :radio_buttons,legend_tag: false,
                   input_html: { class: "tag-selector workshop" },
@@ -58,7 +68,6 @@
   <%= f.button :submit,"Confirm Selection", class: "button-blue" %>
 <% end %>
 </div>
-
 
 
 

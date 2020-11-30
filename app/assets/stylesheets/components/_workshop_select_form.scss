@@ -27,29 +27,44 @@
 }
 
 .tag-selector {
-  position: absolute;
+  // position: absolute;
   transform: scale(0);
 }
 
+
 .tag-selector + label {
-  box-sizing: border-box;
-  padding: 35px 20px;
-  height: 370px;
-  width: 250px;
-  border-radius: 10px;
-  background-color: white;
-  font-size: 20px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  cursor: pointer;
-  display: block;
-  // border-radius: 50rem;
+  // box-sizing: border-box;
+  // padding: 35px 20px;
+  // cursor: pointer;
   // padding: 0.1rem 0.5rem;
-  // background-color: #ECEAFF;
-  // color: #7E73FF;
-  // border: 1px solid #7E73FF;
+  background-color: white;
   // margin-right: 0.6rem;
   // margin-bottom: 0.4rem;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: left;
+  align-items: flex-end;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  padding-bottom: 20px;
 }
+
+.tag-selector + label h4{
+font-size: 15px;
+color: #455CC7;
+font-weight: bold;
+text-align: center;
+margin-bottom: 15px;
+}
+
+.tag-selector + label p{
+ font-size: 1em;
+ text-align: center;
+ margin: 15px 0;
+}
+
+
 
 .tag-selector:checked + label {
   background-color: #C41A49;;
@@ -57,6 +72,26 @@
 }
 
 
+//button
+
+.button-selector{
+  border: 2px solid #C41A49;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 2px 120px;
+  color: #C41A49;
+  font-weight: bolder;
+  background: white;
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+  width: 80%;
+}
+.button-selector:hover {
+  text-decoration: none;
+  color: white;
+  background: #C41A49;
+}
 
 
 

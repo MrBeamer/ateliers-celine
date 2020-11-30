@@ -5,7 +5,7 @@
     <img class="blue-line" src="https://res.cloudinary.com/dxdboxbyb/image/upload/v1606232604/atelier-celine/Landing%20Page/lqztsqrpdeth0ncdjkk6.png" alt="">
     <h3><%= @workshop.artist_name  %></h3>
     <p>You will explore the ancient technique of Cyanotype re-interpreted by our creative master Dimi and Yuko.</p>
-    <%= link_to "Join Now", subscriptions_path, class: "button-show"%>
+    <%= link_to "Join Now", subscriptions_path, class: "button-show-blue"%>
   </div>
   <div class="show-image">
     <div>
@@ -20,16 +20,16 @@
 <div class="center">
   <div>
   <div class="bulletins">
-    <a href="">Ateliers <br> Experience</a>
-    <a href="">Artists <br> & Technique </a>
-    <a href="">Commuinty <br> Info</a>
+    <a href="#create-section">Ateliers <br> Experience</a>
+    <a href="#technique-section">Artists <br> & Technique </a>
+    <a href="#community-section">Commuinty <br> Info</a>
   </div>
   </div>
   <div class="workshop-box">
     <div>
        <img class="imgage-discription" src="https://res.cloudinary.com/dxdboxbyb/image/upload/v1606232606/atelier-celine/Landing%20Page/iscwi7batxkd5vgly5f7.png" alt="">
   </div>
-    <div class="workshop-content-right">
+    <div id="create-section" class="workshop-content-right">
       <h4>What you will create?</h4>
       <img class="red-line" src="https://res.cloudinary.com/dxdboxbyb/image/upload/v1606232604/atelier-celine/Landing%20Page/cluepznhimc95jwz0ono.png" alt="">
     <p>
@@ -39,7 +39,7 @@
   </div>
 
   <div class="workshop-discription">
-  <div class="workshop-content-left">
+  <div id="technique-section" class="workshop-content-left">
     <h4>Origins of the Cyanotype</h4>
     <img class="red-line" src="https://res.cloudinary.com/dxdboxbyb/image/upload/v1606232604/atelier-celine/Landing%20Page/cluepznhimc95jwz0ono.png" alt="">
     <p>
@@ -115,7 +115,7 @@
 </div>
 
 
-<div class="banner-blue">
+<div id="community-section" class="banner-blue">
   <div>
     <h1>Community</h1>
     <h2>#WeAreCéline</h2>
