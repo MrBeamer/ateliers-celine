@@ -18,7 +18,6 @@ Rails.application.routes.draw do
   get 'terms_and_conditions', to: "pages#terms_and_conditions", as: :terms_and_conditions
 
 
-
   resources :orders, only: [:show, :create] do
     resources :payments, only: :new
   end
