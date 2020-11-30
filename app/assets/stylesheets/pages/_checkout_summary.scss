@@ -10,7 +10,6 @@
   padding-right: 30px;
 }
 
-
 .order-image {
   width: 60px;
   // border-radius: 5px;
@@ -40,6 +39,34 @@ justify-content: center;
   flex-direction: column;
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  padding: 20px;
-  padding-bottom: 80px;
+  padding: 5px 20px;
+}
+
+.workshop-address p {
+margin-top: 20px;
+}
+
+.payment-background {
+background-color: #CCD2E9;
+}
+
+.payment-background h4 {
+  color: white;
+}
+
+.button-payment {
+  background-color: #455CC7;
+  border: 1px none black;
+
+  font-weight: bold;
+  color: white;
+  padding: 15px 200px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 3px rgba(50, 50, 50, 0.4);
+  // margin-left: 50px;
+}
+.button-payment:hover {
+  opacity: 0.9;
+  text-decoration: none;
+  color:white;
 }

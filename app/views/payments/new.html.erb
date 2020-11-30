@@ -1,9 +1,10 @@
+<div class="payment-background">
 
 <div class="center mid">
     <div class="workshop-discription">
     <div class="workshop-content-left">
       <h4>Your Address</h4>
-      <img class="red-line" src="https://res.cloudinary.com/dxdboxbyb/image/upload/v1606232604/atelier-celine/Landing%20Page/cluepznhimc95jwz0ono.png" alt="">
+      <img class="red-line" src="https://res.cloudinary.com/dxdboxbyb/image/upload/v1606232604/atelier-celine/Landing%20Page/lqztsqrpdeth0ncdjkk6.png" alt="">
       <div class="workshop-address">
       <p> <strong>First name:</strong> <%= @user.first_name %> </p>
       <p> <strong>Last name:</strong> <%= @user.last_name %> </p>
@@ -13,15 +14,17 @@
       <p> <strong>Postcode:</strong> <%= @user.postcode %> </p>
       </div>
 
+
+
     </div>
     <div class="center">
   <div class="order-box">
     <div class="workshop-content-left">
       <h4>Your Order</h4>
-      <img class="red-line" src="https://res.cloudinary.com/dxdboxbyb/image/upload/v1606232604/atelier-celine/Landing%20Page/cluepznhimc95jwz0ono.png" alt="">
+      <img class="red-line" src="https://res.cloudinary.com/dxdboxbyb/image/upload/v1606232604/atelier-celine/Landing%20Page/lqztsqrpdeth0ncdjkk6.png" alt="">
       <div class="workshop-order">
         <p><%= @order.subscription.sku %></strong> for <strong><%= humanized_money_with_symbol @order.amount %></strong></p>
-        <p>Included workshops:</p>
+        <p><strong>Included workshops:</strong></p>
         <% @order.subscription.workshops.each do |workshop| %>
       <div>
         <%= cl_image_tag(workshop.photo.key, width: 400, height: 600, class: "order-image")%>
@@ -38,7 +41,7 @@
   <div class="center-child">
       <div class="order-box">
     <div class="workshop-content-left">
-      <button id="pay" class="button-show">Confirm Payment</button>
+      <button id="pay" class="button-payment">Confirm Checkout</button>
       <script src="https://js.stripe.com/v3/"></script>
       <script>
         const paymentButton = document.getElementById('pay');
@@ -54,6 +57,7 @@
   </div>
 
 
+</div>
 
 
 
