@@ -13,7 +13,7 @@ class SubscriptionsController < ApplicationController
 
   def new
     @subscription = Subscription.new
-     authorize @subscription
+    authorize @subscription
   end
 
   def create
@@ -35,6 +35,13 @@ class SubscriptionsController < ApplicationController
     end
     @subscription.save
     redirect_to subscription_path(@subscription)
+  end
+
+  def profile
+    @user = current_user
+    @subscription = @user.subscriptions
+    authorize @subscription
+    @workshops = @user.subscriptions[0].workshops 
   end
 
   private

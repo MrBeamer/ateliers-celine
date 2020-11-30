@@ -1,7 +1,7 @@
 class DashboardsController < ApplicationController
+  before_action :authenticate_user!
+  
   def index
-    # @dashboards = policy_scope(Dashboard).order(created_at: :desc)
-    # @user = policy_scope(User).order(created_at: :desc)
-    @user = current_user
+    authorize self
   end
 end
