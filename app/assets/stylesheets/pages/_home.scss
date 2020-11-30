@@ -166,3 +166,50 @@ margin-left: 20px;
 }
 
 
+.carousel-item {
+  position: relative;
+  img {
+    height: 600px;
+    object-fit: cover;
+  }
+}
+
+
+.filter {
+  background-color: rgba(0,0,0,0.3);
+  position: absolute;
+  height: 600px;
+  width: 100%;
+}
+
+.text-left {
+  width: 70%;
+  height: 100%;
+  border-radius: 10px 0 0 10px;
+  padding: 3rem;
+  background: red;
+}
+
+.text-right {
+  text-align: center;
+  width: 30%;
+  height: 100%;
+  background: yellow;
+  border-radius: 0px 10px 10px 0;
+  padding:
+  img {
+    height: 100px;
+    width: auto;
+  }
+}
+
+.carousel-card {
+  display: flex;
+  position: absolute;
+  background: blue;
+  height: 30rem;
+  width: 60rem;
+  top: 3.7rem;
+  left: 14.5rem;
+  border-radius: 10px;
+}
