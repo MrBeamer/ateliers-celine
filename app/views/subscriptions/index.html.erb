@@ -54,7 +54,7 @@
                   as: :check_boxes,legend_tag: false,
                   :label_method => lambda { |workshop|
                   "<div>
-                    #{cl_image_tag(workshop.photo.key, width: 590, height: 280, :radius=>25)}
+                    #{cl_image_tag(workshop.photo.key, width: 590, height: 280, :radius=>10)}
                     <p><strong>#{workshop.name}</strong></p>
                     <p>#{workshop.artist_name}</p>
                     <h4>#{workshop.category}</h4>

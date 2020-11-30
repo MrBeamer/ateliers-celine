@@ -35,13 +35,9 @@
 .tag-selector + label {
   // box-sizing: border-box;
   // padding: 35px 20px;
-  // height: 370px;
-  // width: 250px;
   // cursor: pointer;
   // padding: 0.1rem 0.5rem;
-  // background-color: #ECEAFF;
-  // color: #7E73FF;
-  // border: 1px solid #7E73FF;
+  background-color: white;
   // margin-right: 0.6rem;
   // margin-bottom: 0.4rem;
   background-size: cover;
@@ -51,6 +47,7 @@
   align-items: flex-end;
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  padding-bottom: 20px;
 }
 
 .tag-selector + label h4{
@@ -58,6 +55,7 @@ font-size: 15px;
 color: #455CC7;
 font-weight: bold;
 text-align: center;
+margin-bottom: 15px;
 }
 
 .tag-selector + label p{
@@ -77,13 +75,17 @@ text-align: center;
 //button
 
 .button-selector{
-border: 3px solid #C41A49;
-box-sizing: border-box;
-border-radius: 5px;
-padding: 2px 120px;
-color: #C41A49;
-font-weight: bolder;
-background: white;
+  border: 2px solid #C41A49;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 2px 120px;
+  color: #C41A49;
+  font-weight: bolder;
+  background: white;
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+  width: 80%;
 }
 .button-selector:hover {
   text-decoration: none;
