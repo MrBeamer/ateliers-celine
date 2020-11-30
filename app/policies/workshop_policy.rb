@@ -13,4 +13,8 @@ class WorkshopPolicy < ApplicationPolicy
     return true
   end
   
+  def instructions?
+    return true
+  end
+  
 end

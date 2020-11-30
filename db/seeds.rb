@@ -23,6 +23,7 @@ user = User.create!(
 )
 
 file = URI.open('https://images.unsplash.com/photo-1554668082-50d9cd32f406?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80')
+pdf = URI.open("https://res.cloudinary.com/demo/image/upload/example_pdf.pdf")
 cyanotype = Workshop.create!(
   name: "Cyanotype",
   artist_name: "Dimi & Yuko",
@@ -38,6 +39,9 @@ cyanotype = Workshop.create!(
   user_id: User.last.id
 )
 cyanotype.photo.attach(io: file, filename: 'cyanotype.jpg', content_type: 'image/jpg')
+cyanotype.pdfs.attach(io: pdf, filename: 'cyanotype.pdf', content_type: 'application/pdf')
+
+
 
 
 

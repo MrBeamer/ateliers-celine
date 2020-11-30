@@ -17,8 +17,13 @@ class WorkshopsController < ApplicationController
     @workshop.save
   end
 
+  def instructions
+     @workshop = Workshop.find(params[:id])
+    authorize @workshop
+  end
+
   private 
   def workshop_content_params
-    params.require(:workshop).permit(:workshop_content)
+    params.require(:workshop).permit(:workshop_content, :pdf)
   end
 end
