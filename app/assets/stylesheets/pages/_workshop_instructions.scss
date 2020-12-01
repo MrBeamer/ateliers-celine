@@ -21,3 +21,111 @@
   height: 50px;
   width: 50px;
 }
+
+
+//banner
+
+.instructions-banner {
+  background-color: #C5314B;
+  height: 480px;
+  display: flex;
+}
+
+.instructions-banner h1 {
+  color: #FFFFFF;
+  font-size: 30px;
+  padding-top: 40px;
+  margin-left: 50px;
+}
+
+
+.instructions-banner h2 {
+  color: #FFFFFF;
+  font-size: 30px;
+  margin-left: 50px;
+  margin-top: 10px;
+}
+
+.instructions-banner h3 {
+  color: #FFFFFF;
+  font-size: 30px;
+  margin-left: 50px;
+
+}
+
+.instructions-banner p {
+  color: #FFFFFF;
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 23px;
+  margin-left: 50px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.instructions-image {
+  display: flex;
+}
+
+.instructions-image img{
+  height: 480px
+}
+
+.instructions-box {
+ display: flex;
+ flex-direction: column;
+ background-color: white;
+}
+
+
+
+
+//progress bar
+
+.center-progress-bar {
+display:flex;
+justify-content: center;
+}
+
+.progress-bar-title {
+margin-top: 50px;
+color: #C41A49;
+text-align: center;
+}
+
+.progress {
+  margin-top: 30px;
+  margin-bottom: 50px;
+  width: 50%;
+}
+
+
+.progress-bar {
+  background-color: #455CC7;
+  width: 50%;
+}
+
+//left instruction side
+
+.instruction-single-box {
+height: 322 px;
+padding-bottom: 165px;
+}
+
+.instructions-description {
+  margin-top: 50px;
+}
+
+.progress-button {
+  margin-top: 50px;
+}
+
+//right instruction side
+
+.instruction-video {
+margin-bottom: 50px;
+margin-top: 50px;
+}
+
+
+
+

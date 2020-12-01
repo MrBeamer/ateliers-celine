@@ -1,4 +1,74 @@
-<h1> Workshop instructions </h1>
+<div class="instructions-box">
+
+
+
+
+<div class="instructions-banner">
+  <div>
+    <h1><%= @workshop.name%></h1>
+    <h2>Atelier</h2>
+    <img class="blue-line" src="https://res.cloudinary.com/dxdboxbyb/image/upload/v1606232604/atelier-celine/Landing%20Page/lqztsqrpdeth0ncdjkk6.png" alt="">
+    <h3><%= @workshop.artist_name  %></h3>
+    <p>You will explore the ancient technique of Cyanotype re-interpreted by our creative master Dimi and Yuko.</p>
+  </div>
+  <div class="instructions-image">
+    <div>
+      <img src="https://images.unsplash.com/photo-1529066792305-5e4efa40fde9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80" alt="">
+    </div>
+    <div >
+      <img src="https://images.unsplash.com/photo-1486413869840-a99ac0a4c031?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=742&q=80" alt="">
+    </div>
+  </div>
+</div>
+
+<div class="progress-bar-title">
+  <h1> Workshop Progression </h1>
+</div>
+
+<div class="center-progress-bar">
+  <div class="progress">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+</div>
+
+<div class="center mid">
+    <div class="workshop-discription">
+    <div class="workshop-content-left">
+       <div>
+    <% @workshop.steps.each do |step| %>
+    <div class="instruction-single-box">
+    <div class="instructions-title">
+      <h4> <%= step.title %> </h4>
+    </div>
+
+    <div class="instructions-description">
+    <%= step.description %>
+    </div>
+
+    <div class="progress-button">
+      <%= link_to "Done", mark_as_done_workshop_path(:step_id => step.id), method: :post, class: "button-pink timeline-button",  id: "done_#{step.id}" %>
+    </div>
+
+    </div>
+    <hr>
+    <% end %>
+  </div>
+
+    </div>
+
+  <div>
+    <% @workshop.steps.each do |step| %>
+    <div class="instruction-video">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= step.youtube_url %>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <hr>
+    <% end %>
+  </div>
+
+</div>
+
+  </div>
+</div>
 
 <div id="instructions-container">
   <div>
@@ -6,21 +76,8 @@
     <% @workshop.steps.each do |step| %>
     <div id="timeline-inline">
       <p id="ball_<%= step.id %>" class="ball"> <%= counter %>.<p>
-      <p> <%= step.title %> </p>
       <% counter += 1 %>
     </div>
     <% end %>
   </div>
-
-  <div>
-    <% @workshop.steps.each do |step| %>
-    <h4> <%= step.title %> </h4> <br>
-    <%= step.description %> <br>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= step.youtube_url %>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <%= link_to "Done", mark_as_done_workshop_path(:step_id => step.id), method: :post, class: "button-pink timeline-button",  id: "done_#{step.id}" %>
-    <% end %>
-  </div>
-
-</div>
-
 

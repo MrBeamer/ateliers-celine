@@ -12,7 +12,6 @@
           <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
         <% end %>
         <%= f.input :photo, as: :file %>
-        <%= cl_image_upload_tag(:image_id) %>
         <%= f.input :bio,
                     hint: "Update your bio information",
                     required: false %>

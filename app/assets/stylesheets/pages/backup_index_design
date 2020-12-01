@@ -27,3 +27,37 @@
 
 
 #{link_to "Discover", workshop_path(workshop), class: "button-selector"}
+    <!--     <%= cl_image_upload_tag(:iamge_id) %> -->
+
+
+    <% if @user.avatar.attached? %>
+            <%= cl_image_tag @user.avatar.key, class: "avatar-large dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <%else %>
+                <%= image_tag "https://avatarfiles.alphacoders.com/263/263699.jpg", class: "avatar-large dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <% end %>
+
+
+
+
+old
+
+  <div>
+    <% @workshop.steps.each do |step| %>
+    <h4> <%= step.title %> </h4> <br>
+    <%= step.description %> <br>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= step.youtube_url %>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <%= link_to "Done", mark_as_done_workshop_path(:step_id => step.id), method: :post, class: "button-pink timeline-button",  id: "done_#{step.id}" %>
+    <% end %>
+  </div>
+
+
+  <div id="instructions-container">
+  <div>
+    <% counter = 1 %>
+    <% @workshop.steps.each do |step| %>
+    <div id="timeline-inline">
+      <p id="ball_<%= step.id %>" class="ball"> <%= counter %>.<p>
+      <% counter += 1 %>
+    </div>
+    <% end %>
+  </div>
