@@ -22,8 +22,16 @@ class WorkshopsController < ApplicationController
     authorize @workshop
   end
 
+  def mark_as_done
+    @step = UserStep.where(:user_id => current_user.id, :step_id => params[:step_id])[0]
+    @step.done = true
+    @step.save
+    authorize @step
+  end
+
   private 
+
   def workshop_content_params
-    params.require(:workshop).permit(:workshop_content)
+    params.require(:workshop).permit(:workshop_content, :pdf)
   end
 end

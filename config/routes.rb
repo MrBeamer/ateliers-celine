@@ -4,11 +4,13 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   resources :workshops, only: [:index, :show, :update] do
+    
     member do
       get :instructions
+      post :mark_as_done, to: "workshops#mark_as_done"
     end
   end
-
+ 
 
 
   resources :subscriptions, only: [:index, :new, :create, :show] do

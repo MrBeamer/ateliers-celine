@@ -23,7 +23,7 @@ user = User.create!(
 )
 
 file = URI.open('https://images.unsplash.com/photo-1554668082-50d9cd32f406?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80')
-pdf = URI.open("https://res.cloudinary.com/yileijiang/image/upload/v1606811531/qk73ftw9xpqspe526pohouyahb82.pdf")
+# pdf = URI.open("https://res.cloudinary.com/yileijiang/image/upload/v1606811531/qk73ftw9xpqspe526pohouyahb82.pdf")
 cyanotype = Workshop.create!(
   name: "Cyanotype",
   artist_name: "Dimi & Yuko",
@@ -39,19 +39,19 @@ cyanotype = Workshop.create!(
   user_id: User.last.id
 )
 cyanotype.photo.attach(io: file, filename: 'cyanotype.jpg', content_type: 'image/jpg')
-cyanotype.pdf.attach(io: pdf, filename: 'cyanotype.pdf', content_type: 'application/pdf')
+# cyanotype.pdf.attach(io: pdf, filename: 'cyanotype.pdf', content_type: 'application/pdf')
 
 cyanotype_step_one = Step.create!(
   title: "How to make pictures beautiful",
   description: "Make pictures very beautiful. Start by making a beautiful picture. It is so beautiful.",
-  youtube_url: "https://www.youtube.com/watch?v=tPSRzNdZlEQ",
+  youtube_url: "2Trm7jui9sg",
   workshop_id: cyanotype.id
 )
 
 cyanotype_step_two = Step.create!(
   title: "How to make pictures nice",
   description: "Make pictures very nice. Start by making a nice picture. It is so nice.",
-  youtube_url: "https://www.youtube.com/watch?v=2Trm7jui9sg",
+  youtube_url: "rJlY1uKL87k",
   workshop_id: cyanotype.id
 )
 
