@@ -1,4 +1,147 @@
-<h1> Workshop instructions </h1>
+<div class="instructions-box">
+
+<div class="instructions-banner">
+  <div>
+    <h1><%= @workshop.name%></h1>
+    <h2>Atelier</h2>
+    <img class="blue-line" src="https://res.cloudinary.com/dxdboxbyb/image/upload/v1606232604/atelier-celine/Landing%20Page/lqztsqrpdeth0ncdjkk6.png" alt="">
+    <h3><%= @workshop.artist_name  %></h3>
+    <p>You will learn the ancient technique of Cyanotype from our creative master Dimi and Yuko.</p>
+  </div>
+  <div class="instructions-image">
+    <div>
+      <img src="https://images.unsplash.com/photo-1529066792305-5e4efa40fde9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80" alt="">
+    </div>
+    <div >
+      <img src="https://images.unsplash.com/photo-1486413869840-a99ac0a4c031?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=742&q=80" alt="">
+    </div>
+  </div>
+</div>
+
+<div class="center flex-it">
+    <div class="workshop-discription">
+    <div class="workshop-content-left">
+      <h4>Ready To Start?</h4>
+      <img class="red-line" src="https://res.cloudinary.com/dxdboxbyb/image/upload/v1606232604/atelier-celine/Landing%20Page/cluepznhimc95jwz0ono.png" alt="">
+      <div>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </div>
+    </div>
+  <div class="duration-level-bar align-items-center">
+    <div>
+        <div class="flex-it">
+    <i class="far fa-clock"></i>
+    <p>4 hours of atelier</p>
+  </div>
+  <div class="flex-it">
+    <i class="far fa-calendar-alt"></i>
+    <p>12/2020</p>
+  </div>
+ <div class="flex-it">
+    <i class="fas fa-signal"></i>
+    <p>intermediate level</p>
+  </div>
+    </div>
+
+  </div>
+  </div>
+</div>
+
+
+<div class="progress-bar-title">
+  <h1> Workshop Progression </h1>
+</div>
+
+<div class="center-progress-bar">
+  <div class="progress">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+  </div>
+</div>
+</div>
+
+<div class="center-legend-bar">
+  <div class="progress-bar-legend">
+    <p>0%</p>
+    <p>50%</p>
+    <p>100%</p>
+  </div>
+</div>
+
+
+<div class="center mid">
+    <div class="workshop-discription">
+    <div class="workshop-content-left">
+       <div>
+    <% @workshop.steps.each do |step| %>
+    <div class="instruction-single-box">
+    <div class="instructions-title">
+      <h4> <%= step.title %> </h4>
+    </div>
+
+    <div class="instructions-description">
+    <%= step.description %>
+    </div>
+
+    <div class="progress-button">
+      <%= link_to "Done", mark_as_done_workshop_path(:step_id => step.id), method: :post, class: "button-pink timeline-button",  id: "done_#{step.id}" %>
+    </div>
+
+    </div>
+    <hr>
+    <% end %>
+  </div>
+    </div>
+
+  <div>
+    <% @workshop.steps.each do |step| %>
+    <div class="instruction-video">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= step.youtube_url %>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <hr>
+    <% end %>
+  </div>
+</div>
+  </div>
+
+
+<div id="community-section" class="banner-blue">
+  <div>
+    <h1>Share Your Work on Instagram #WeAreCéline</h1>
+    <img class="blue-line" src="https://res.cloudinary.com/dxdboxbyb/image/upload/v1606232604/atelier-celine/Landing%20Page/cluepznhimc95jwz0ono.png" alt="">
+  </div>
+
+  <div class="community-cards center">
+    <div class="community-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1569172122301-bc5008bc09c5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80)">
+      Phillipe
+    </div>
+
+    <div class="community-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1526304760382-3591d3840148?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80)">
+      Lei
+    </div>
+
+    <div class="community-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1552312097-8ef75595e2a2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1300&q=80)">
+      Tom
+    </div>
+    <div class="community-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1523554888454-84137e72c3ce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80)">
+      James
+    </div>
+
+    <div class="community-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1555420087-62ca236e0256?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1306&q=80)">
+      Nina
+    </div>
+
+    <div class="community-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1556760891-018194410847?ixlib=rb-1.2.1&auto=format&fit=crop&w=1502&q=80)">
+      Lisa
+    </div>
+  </div>
+    <%= link_to "Share your Work", root_path, class: "button-social" %>
+</div>
+
+</div>
+
+
+
+
 
 <div id="instructions-container">
   <div>
@@ -6,21 +149,8 @@
     <% @workshop.steps.each do |step| %>
     <div id="timeline-inline">
       <p id="ball_<%= step.id %>" class="ball"> <%= counter %>.<p>
-      <p> <%= step.title %> </p>
       <% counter += 1 %>
     </div>
     <% end %>
   </div>
-
-  <div>
-    <% @workshop.steps.each do |step| %>
-    <h4> <%= step.title %> </h4> <br>
-    <%= step.description %> <br>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= step.youtube_url %>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <%= link_to "Done", mark_as_done_workshop_path(:step_id => step.id), method: :post, class: "button-pink timeline-button",  id: "done_#{step.id}" %>
-    <% end %>
-  </div>
-
-</div>
-
 

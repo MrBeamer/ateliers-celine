@@ -9,10 +9,10 @@ puts 'Database clean ✅'
 # Users
 user = User.create!(
   artist: true,
-  first_name: "Michael",
-  last_name: "Beamer",
-  username: "MBeamer",
-  email: "beamer@gmx.com",
+  first_name: "Letitia",
+  last_name: "Wright",
+  username: "Shuri",
+  email: "wright@gmx.com",
   password: "password",
   country: "Germany",
   city: "Berlin",
