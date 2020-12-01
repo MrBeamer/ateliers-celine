@@ -12,5 +12,9 @@ class WorkshopPolicy < ApplicationPolicy
   def update?
     return true
   end
+
+  def instructions?
+    return true
+  end
   
 end

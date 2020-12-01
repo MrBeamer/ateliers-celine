@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_30_112610) do
+ActiveRecord::Schema.define(version: 2020_12_01_100819) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -80,6 +80,16 @@ ActiveRecord::Schema.define(version: 2020_11_30_112610) do
     t.index ["subscription_id"], name: "index_reviews_on_subscription_id"
   end
 
+  create_table "steps", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.string "youtube_url"
+    t.bigint "workshop_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["workshop_id"], name: "index_steps_on_workshop_id"
+  end
+
   create_table "subscription_workshops", force: :cascade do |t|
     t.bigint "subscription_id", null: false
     t.bigint "workshop_id", null: false
@@ -99,6 +109,16 @@ ActiveRecord::Schema.define(version: 2020_11_30_112610) do
     t.string "sku"
     t.integer "price_cents", default: 0, null: false
     t.index ["user_id"], name: "index_subscriptions_on_user_id"
+  end
+
+  create_table "user_steps", force: :cascade do |t|
+    t.boolean "done"
+    t.bigint "user_id", null: false
+    t.bigint "step_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["step_id"], name: "index_user_steps_on_step_id"
+    t.index ["user_id"], name: "index_user_steps_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -142,8 +162,11 @@ ActiveRecord::Schema.define(version: 2020_11_30_112610) do
   add_foreign_key "orders", "subscriptions"
   add_foreign_key "orders", "users"
   add_foreign_key "reviews", "subscriptions"
+  add_foreign_key "steps", "workshops"
   add_foreign_key "subscription_workshops", "subscriptions"
   add_foreign_key "subscription_workshops", "workshops"
   add_foreign_key "subscriptions", "users"
+  add_foreign_key "user_steps", "steps"
+  add_foreign_key "user_steps", "users"
   add_foreign_key "workshops", "users"
 end
