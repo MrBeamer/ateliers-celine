@@ -168,5 +168,25 @@ margin-top: 50px;
 }
 
 
+// Social section
+
+.button-social{
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 2px 120px;
+  color: white;
+  font-weight: bolder;
+  background: #C41A49;
+  margin-top: 50px;
+  width: 50% ;
+  text-align: center;
+  margin-left: 360px;
+}
+.button-social:hover {
+  text-decoration: none;
+  color: #C41A49;
+  background: white;
+}
+
 
 
