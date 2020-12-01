@@ -7,6 +7,8 @@ class User < ApplicationRecord
   has_many :subscriptions
   has_many :workshops
   has_many :orders
+  has_many :user_steps
+  has_many :steps, through: :user_steps
 
   #validates :username, :first_name, :last_name, :country, :city, :state, :postcode, :street, presence: true
   #validates :username, uniqueness: true
