@@ -27,15 +27,40 @@ class SubscriptionsController < ApplicationController
       # TODO: add end_date
       @subscription.price = 185
       @subscription.sku = "Three Month Plan"
+
+      @subscription.workshops.each do |workshop|
+      workshop.steps.each do |step|
+        user_step = UserStep.new
+        user_step.user = current_user
+        user_step.step = step
+        user_step.done = false
+        user_step.save
+        end
+      end
+
     else
       @subscription.start_date = Date.today
       @subscription.duration = 1
       @subscription.price = 90
       @subscription.sku = "One Month Plan"
+
+      user_step = UserStep.new
+      user_step.user = current_user
+      @subscription.workshops[0].steps.each do |step|
+        user_step = UserStep.new
+        user_step.user = current_user
+        user_step.step = step
+        user_step.done = false
+        user_step.save
+      end
     end
+
     @subscription.save
+
+
+
     redirect_to new_subscription_order_path(@subscription)
-    
+
   end
 
  

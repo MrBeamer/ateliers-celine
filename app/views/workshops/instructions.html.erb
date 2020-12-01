@@ -1,7 +1,10 @@
 <p>TEST</p>
 
-<%= cl_image_path @workshop.pdfs.first.key %>
 
-<p> https://res.cloudinary.com/yileijiang/image/upload/v1606747176/aycys3n4asw9czrue70x7nxitm5d.pdf </p>
+<% @workshop.steps.each do |step| %>
+ <%= step.title %> <br>
+ <%= step.description %> <br>
+ 
+ <iframe width="560" height="315" src="<%= step.youtube_url %>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<% end %>
 
-https://res.cloudinary.com/yileijiang/image/upload/aycys3n4asw9czrue70x7nxitm5d
