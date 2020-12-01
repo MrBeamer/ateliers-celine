@@ -1,0 +1,23 @@
+#instructions-container {
+  display: flex;
+}
+
+#timeline-inline {
+  display: flex;
+}
+
+.ball {
+  background-color: violet;
+  border-radius: 50%;
+  padding: 40px;
+  height: 50px;
+  width: 50px;
+}
+
+.ball-done {
+  background-color: red;
+  border-radius: 50%;
+  padding: 40px;
+  height: 50px;
+  width: 50px;
+}
