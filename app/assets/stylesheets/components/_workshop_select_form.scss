@@ -34,13 +34,7 @@
 
 
 .tag-selector + label {
-  // box-sizing: border-box;
-  // padding: 35px 20px;
-  // cursor: pointer;
-  // padding: 0.1rem 0.5rem;
   background-color: white;
-  // margin-right: 0.6rem;
-  // margin-bottom: 0.4rem;
   background-size: cover;
   background-position: center;
   display: flex;
@@ -49,6 +43,7 @@
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   padding-bottom: 20px;
+  cursor: pointer;
 }
 
 .tag-selector + label h4{
@@ -70,6 +65,7 @@ margin-bottom: 15px;
 .tag-selector:checked + label {
   background-color: #C41A49;;
   color: white;
+  cursor: pointer;
 }
 
 

@@ -73,7 +73,7 @@
 .instructions-box {
  display: flex;
  flex-direction: column;
- background-color: white;
+ background-color: white !important;
 }
 
 
@@ -88,7 +88,7 @@ justify-content: center;
 
 .progress-bar-title {
 margin-top: 50px;
-color: #C41A49;
+color: #455CC7;
 text-align: center;
 }
 
@@ -100,14 +100,14 @@ text-align: center;
 
 
 .progress-bar {
-  background-color: #455CC7;
+  background-color: #C41A49;
   width: 50%;
 }
 
 .progress-bar-legend {
   display: flex;
   justify-content: space-between;
-  color: #C41A49;
+  color: #455CC7;
   text-align: center;
   width: 50%;
 }
