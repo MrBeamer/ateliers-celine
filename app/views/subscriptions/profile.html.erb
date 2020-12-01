@@ -1,12 +1,9 @@
 
 <div id="profile-banner">
-  <div class="container-profile"> 
-    <%= link_to "Edit", edit_user_registration_path, class: "button-pink" %>
-  
+  <div class="container-profile">
     <h1> My Profile </h1>
     <br>
     <div class="rectangle"> </div>
-
     <div id="profile">
 
       <div id="profile-picture">
@@ -31,6 +28,7 @@
     </div>
   </div>
 </div>
+                <%= link_to "Edit", edit_user_registration_path, class: "button-pink" %>
 
 
 <div class="container">
@@ -38,7 +36,7 @@
     <br>
     <div class="rectangle"> </div>
 
-    <div class="my-workshops"> 
+    <div class="my-workshops">
       <div class="center-profile">
         <div class="index-cards">
           <% @workshops.each do |workshop| %>
@@ -57,7 +55,7 @@
 
 </div>
 
-  
+
 
 
 

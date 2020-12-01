@@ -7,6 +7,7 @@ class User < ApplicationRecord
   has_many :subscriptions
   has_many :workshops
   has_many :orders
+  has_one_attached :photo
   has_many :user_steps
   has_many :steps, through: :user_steps
 
