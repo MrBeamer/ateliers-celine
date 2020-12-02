@@ -215,6 +215,14 @@ text-align: center;
 }
 
 // Reviews
+
+.reviews {
+  width: 1350px;
+}
+.review {
+  width: 450px;
+}
+
 .reviews p {
   color: black;
   font-size: 25px;
@@ -234,3 +242,10 @@ margin-top: 60px;
 .review .review-username {
  color: #455CC7;
 }
+
+.fa-star {
+color:#DAB300;
+  margin-top: 15px;
+  margin-bottom: 12px;
+}
+

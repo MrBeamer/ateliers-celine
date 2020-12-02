@@ -150,7 +150,40 @@
   <div class="reviews">
     <% @workshop.reviews.each do |review|  %>
     <div class="review">
-      <p> <%= review.rating %></p>
+      <% case review.rating %>
+<%when 1%>
+  <i class="fas fa-star"></i>
+  <i class="far fa-star"></i>
+  <i class="far fa-star"></i>
+  <i class="far fa-star"></i>
+  <i class="far fa-star"></i>
+<%when 2%>
+  <i class="fas fa-star"></i>
+  <i class="fas fa-star"></i>
+  <i class="far fa-star"></i>
+  <i class="far fa-star"></i>
+  <i class="far fa-star"></i>
+<%when 3%>
+  <i class="fas fa-star"></i>
+  <i class="fas fa-star"></i>
+  <i class="fas fa-star"></i>
+  <i class="far fa-star"></i>
+  <i class="far fa-star"></i>
+<%when 4%>
+  <i class="fas fa-star"></i>
+  <i class="fas fa-star"></i>
+  <i class="fas fa-star"></i>
+  <i class="fas fa-star"></i>
+  <i class="far fa-star"></i>
+<%when 5%>
+  <i class="fas fa-star"></i>
+  <i class="fas fa-star"></i>
+  <i class="fas fa-star"></i>
+  <i class="fas fa-star"></i>
+  <i class="fas fa-star"></i>
+<%else%>
+  <%= "Rating must be between 1 and 5 Stars"%>
+  <%end%>
       <p> <%= review.comment %></p>
       <p class="review-username"> <%= review.user.username %></p>
     </div>
@@ -158,6 +191,9 @@
   </div>
 </div>
 </div>
+
+
+
 
 
 

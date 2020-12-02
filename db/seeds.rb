@@ -299,16 +299,24 @@ post_5.photo.attach(io: file, filename: 'post_5.jpg', content_type: 'image/jpg')
 
 review_1 = Review.create!(
   comment: "Amazing workshop, the output was outstanding and I had so much fun with my boyfriend.",
+  rating: 5,
   user_id: User.second.id,
   workshop_id: Workshop.first.id
 )
 
 review_2 = Review.create!(
   comment: "Dimi and Yuko were so inspiring, they made me travel to japan through the video. Thank you again!",
+  rating: 5,
   user_id: User.third.id,
   workshop_id: Workshop.first.id
 )
 
+review_3 = Review.create!(
+  comment: "Once you learn the technique is incredible how easy you can re-apply it over and over",
+  rating: 4,
+  user_id: User.fourth.id,
+  workshop_id: Workshop.first.id
+)
 
 
 puts "Complete, created #{Workshop.count} workshops."
