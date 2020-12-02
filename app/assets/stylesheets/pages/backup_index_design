@@ -64,3 +64,41 @@ old
 
       <%= link_to "Back", :back %>
 
+
+
+case review.rating
+when 1
+  <i class="fas fa-star"></i>
+  <i class="far fa-star"></i>
+  <i class="far fa-star"></i>
+  <i class="far fa-star"></i>
+  <i class="far fa-star"></i>
+when 2
+  <i class="fas fa-star"></i>
+  <i class="fas fa-star"></i>
+  <i class="far fa-star"></i>
+  <i class="far fa-star"></i>
+  <i class="far fa-star"></i>
+when 3
+  <i class="fas fa-star"></i>
+  <i class="fas fa-star"></i>
+  <i class="fas fa-star"></i>
+  <i class="far fa-star"></i>
+  <i class="far fa-star"></i>
+when 4
+  <i class="fas fa-star"></i>
+  <i class="fas fa-star"></i>
+  <i class="fas fa-star"></i>
+  <i class="fas fa-star"></i>
+  <i class="far fa-star"></i>
+when 5
+  <i class="fas fa-star"></i>
+  <i class="fas fa-star"></i>
+  <i class="fas fa-star"></i>
+  <i class="fas fa-star"></i>
+  <i class="fas fa-star"></i>
+else
+  "Rating must be between 1 and 5 Stars"
+
+      <p> <%= review.rating %> out of 5 Stars</p>
+
