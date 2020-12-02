@@ -42,19 +42,62 @@ cyanotype.photo.attach(io: file, filename: 'cyanotype.jpg', content_type: 'image
 # cyanotype.pdf.attach(io: pdf, filename: 'cyanotype.pdf', content_type: 'application/pdf')
 
 cyanotype_step_one = Step.create!(
-  title: "How to make pictures beautiful",
-  description: "Make pictures very beautiful. Start by making a beautiful picture. It is so beautiful.",
-  youtube_url: "2Trm7jui9sg",
+  title: "1. Making Cyanotype Emulsion",
+  description: "The recipe we will give you will make up to 10-15 A5 size prints. The cyanotype is made out of two simple solutions:
+•	Solution A: 2 grams Ferric ammonium citrate (green)
+•	Solution B: 0,8 grams Potassium ferricyanide (red)
+in 20 ml water that you will find inside the brown bottle
+A folded piece of paper can be used as a funnel. Take your bottle with the distilled water and dissolve the chemicals into it. Stir your solution properly till the chemical is dissolved. Unused solutions can be stored separately in the brown bottle away from light, but will not last very long once they have been mixed",
+  youtube_url: "EZQDZyo63uc",
   workshop_id: cyanotype.id
 )
 
 cyanotype_step_two = Step.create!(
-  title: "How to make pictures nice",
-  description: "Make pictures very nice. Start by making a nice picture. It is so nice.",
-  youtube_url: "rJlY1uKL87k",
+  title: "2. Application of the Emulsion on Papers",
+  description: "•	To apply the emulsion, it's best to use the pipette and fill it with your mixed emulsion
+  •	Now drop the emulsion evenly on the paper so you can spread it with your brush afterwards
+  •	Make sure to not leave the drops onto the surface for too long since the emulsion drops sink into the paper quite fast and it can leave nasty marks on your print later.
+  •	By using a brush you can just simply paint the chemical on your paper. The way you apply the chemical is affecting your result
+  •	You can choose to brush very gently or go very rough to get a more picturesque brushstroke. Make sure your working area is dimly lit",
+  youtube_url: "-mdOqI1cbrI",
   workshop_id: cyanotype.id
 )
 
+cyanotype_step_three = Step.create!(
+  title: "3. Dry the Papers",
+  description: "•	Once the papers are coated, leave them to dry in the dark place
+  •	You can also use a blow dryer to fasten the drying process
+  •	If you use a blow-drier, Please make sure to flatten paper",
+  youtube_url: "XroD5qNl9Wk",
+  workshop_id: cyanotype.id
+)
+
+cyanotype_step_four = Step.create!(
+  title: "4. Expose Your Papers",
+  description: "•	Put the contact frame outside for exposure
+  •	When you are in the season with higher sun and longer day time, you should look out for your print, because the print will be fully exposed in a few minutes
+  •	during the wintertime, when the day is shorter and cloudy, you might need 4-6 hours for the exposure",
+  youtube_url: "sxTjmIoU52g",
+  workshop_id: cyanotype.id
+)
+
+cyanotype_step_five = Step.create!(
+  title: "5. Develop and Rinse the Photo",
+  description: "•	After exposing it in the sunlight you take your print out of the contact frame
+  •	It is sufficient to immerse the photo for a few minutes in a tray filled with tap water or just rinse it in your sink
+  •	When rinsing, we have to be careful that the stream of water does not run directly on the image",
+  youtube_url: "LFL5-e1aknM",
+  workshop_id: cyanotype.id
+)
+
+cyanotype_step_six = Step.create!(
+  title: "6. Dry it and ENJOY Your Beautiful Creation",
+  description: "•	Take the water out from the print with the kitchen paper towels.
+  •	And hang your prints, let it dry naturally.
+  •	If you want it to dry very quickly, you can also dry your paper with a blow drier",
+  youtube_url: "H6Xj-Eq0Dio",
+  workshop_id: cyanotype.id
+)
 
 file = URI.open('https://images.unsplash.com/photo-1501632865397-94246a9f1521?ixlib=rb-1.2.1&auto=format&fit=crop&w=2588&q=80')
 botanically = Workshop.create!(
