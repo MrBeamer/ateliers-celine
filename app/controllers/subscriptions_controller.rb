@@ -69,7 +69,11 @@ class SubscriptionsController < ApplicationController
     @user = current_user
     @subscription = @user.subscriptions
     authorize @subscription
-    @workshops = @user.subscriptions[0].workshops 
+
+    if @workshops.nil? == false
+      @workshops = @user.subscriptions[0].workshops
+    end
+    
   end
 
   private
