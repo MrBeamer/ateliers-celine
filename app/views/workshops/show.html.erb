@@ -143,23 +143,18 @@
 
 <div class="center">
   <div class="headline-box">
-  <div>
-    <h4>What Crafter’s Say’s? </h4>
+  <div id="reviews_all">
+    <h4>What Crafters think? </h4>
     <img class="red-line" src="https://res.cloudinary.com/dxdboxbyb/image/upload/v1606232604/atelier-celine/Landing%20Page/cluepznhimc95jwz0ono.png" alt="">
   </div>
-  <div class="reviews">
-  <div class="review">
-    <p>Amazing workshop, the output was outstanding and I had so much fun with my boyfriend</p>
-    <p class="review-username">Maria</p>
-  </div>
+  <div class="reviews"> 
+    <% @workshop.reviews.each do |review|  %>
     <div class="review">
-    <p>Once you learn the technique is incredible how easy you can re-apply it over and over</p>
-    <p class="review-username">Tom</p>
-  </div>
-    <div class="review">
-    <p>Dimi and Yuko were so inspiring, they made me travel to japan through the video. Thank you again!</p>
-    <p class="review-username">Lori</p>
-  </div>
+      <p> <%= review.rating %></p>
+      <p> <%= review.comment %></p>
+      <p class="review-username"> <%= review.user.username %></p>
+    </div>
+    <% end %>
   </div>
 </div>
 </div>

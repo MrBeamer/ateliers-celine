@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     end
 
     resources :posts, only: [:new, :create, :index]
+    resources :reviews, only: [:new, :create, :index]
     
   end
  

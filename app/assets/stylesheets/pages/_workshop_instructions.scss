@@ -6,6 +6,12 @@
   display: flex;
 }
 
+.margin-left {
+  margin-left: 50px;
+}
+
+
+
 .ball {
   background-color: violet;
   border-radius: 50%;
@@ -133,10 +139,29 @@ text-align: center;
 
 .progress-bar_1 {
   background-color: #C41A49;
-  width: 50%;
+  width: 16.67%;
 }
 
 .progress-bar_2 {
+  background-color: #C41A49;
+  width: 33.34%;
+}
+
+.progress-bar_3 {
+  background-color: #C41A49;
+  width: 50.01%;
+}
+
+.progress-bar_4 {
+  background-color: #C41A49;
+  width: 66.68%;
+}
+
+.progress-bar_5 {
+  background-color: #C41A49;
+  width: 83.35%;
+}
+.progress-bar_6 {
   background-color: #C41A49;
   width: 100%;
 }

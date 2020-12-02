@@ -18,6 +18,9 @@ class SubscriptionsController < ApplicationController
 
   def create
     @subscription = Subscription.new(subscription_params)
+    if !@subscription.workshops.any?
+      @subscription.workshops << Workshop.find(params[:subscription][:workshop_ids])
+    end
     authorize @subscription
     @subscription.user = current_user
     @subscription.save

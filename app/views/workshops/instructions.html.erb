@@ -7,6 +7,7 @@
     <img class="blue-line" src="https://res.cloudinary.com/dxdboxbyb/image/upload/v1606232604/atelier-celine/Landing%20Page/lqztsqrpdeth0ncdjkk6.png" alt="">
     <h3><%= @workshop.artist_name  %></h3>
     <p>You will learn the ancient technique of Cyanotype from our creative master Dimi and Yuko.</p>
+    <%= link_to "Leave a Review", new_workshop_review_path(@workshop), class: "subscription-btn margin-left" %>
   </div>
   <div class="instructions-image">
     <div>

@@ -11,6 +11,7 @@ class User < ApplicationRecord
   has_many :user_steps
   has_many :steps, through: :user_steps
   has_many :posts
+  has_many :reviews
 
   #validates :username, :first_name, :last_name, :country, :city, :state, :postcode, :street, presence: true
   #validates :username, uniqueness: true
