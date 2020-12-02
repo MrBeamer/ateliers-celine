@@ -70,9 +70,7 @@ class SubscriptionsController < ApplicationController
     @subscription = @user.subscriptions
     authorize @subscription
 
-    if @workshops.nil? == false
-      @workshops = @user.subscriptions[0].workshops
-    end
+    @workshops = @user.subscriptions[0].workshops if !@user.subscriptions.empty?
     
   end
 
