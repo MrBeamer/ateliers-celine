@@ -22,6 +22,81 @@ user = User.create!(
   phone: "00491603308134"
 )
 
+user_one = User.create!(
+  artist: true,
+  first_name: "Letitia",
+  last_name: "Wright",
+  username: "CelineC",
+  email: "celine@gmx.com",
+  password: "password",
+  country: "Germany",
+  city: "Berlin",
+  state: "Berlin",
+  postcode: "10179",
+  street: "Dresdener Str. 114",
+  phone: "00491603308134"
+)
+
+user_two = User.create!(
+  artist: true,
+  first_name: "Letitia",
+  last_name: "Wright",
+  username: "Zelda",
+  email: "zelda@gmx.com",
+  password: "password",
+  country: "Germany",
+  city: "Berlin",
+  state: "Berlin",
+  postcode: "10179",
+  street: "Dresdener Str. 114",
+  phone: "00491603308134"
+)
+
+user_three = User.create!(
+  artist: true,
+  first_name: "Letitia",
+  last_name: "Wright",
+  username: "Link12",
+  email: "link@gmx.com",
+  password: "password",
+  country: "Germany",
+  city: "Berlin",
+  state: "Berlin",
+  postcode: "10179",
+  street: "Dresdener Str. 114",
+  phone: "00491603308134"
+)
+
+user_four = User.create!(
+  artist: true,
+  first_name: "Letitia",
+  last_name: "Wright",
+  username: "GannonD0rf",
+  email: "gannondorf@gmx.com",
+  password: "password",
+  country: "Germany",
+  city: "Berlin",
+  state: "Berlin",
+  postcode: "10179",
+  street: "Dresdener Str. 114",
+  phone: "00491603308134"
+)
+
+user_five = User.create!(
+  artist: true,
+  first_name: "Letitia",
+  last_name: "Wright",
+  username: "Sheika",
+  email: "sheika@gmx.com",
+  password: "password",
+  country: "Germany",
+  city: "Berlin",
+  state: "Berlin",
+  postcode: "10179",
+  street: "Dresdener Str. 114",
+  phone: "00491603308134"
+)
+
 file = URI.open('https://images.unsplash.com/photo-1554668082-50d9cd32f406?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80')
 # pdf = URI.open("https://res.cloudinary.com/yileijiang/image/upload/v1606811531/qk73ftw9xpqspe526pohouyahb82.pdf")
 cyanotype = Workshop.create!(
@@ -175,8 +250,9 @@ landscape.photo.attach(io: file, filename: 'landscape.jpg', content_type: 'image
 
 file = URI.open('https://images.unsplash.com/photo-1569172122301-bc5008bc09c5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80')
 post_1 = Post.create!(
-  title: "James",
-  user_id: User.last.id
+  title: "Mosaic Project",
+  user_id: User.second.id,
+  workshop_id: Workshop.first.id
 )
 post_1.photo.attach(io: file, filename: 'post_1.jpg', content_type: 'image/jpg')
 
@@ -184,8 +260,9 @@ post_1.photo.attach(io: file, filename: 'post_1.jpg', content_type: 'image/jpg')
 
 file = URI.open('https://images.unsplash.com/photo-1526304760382-3591d3840148?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80')
 post_2 = Post.create!(
-  title: "Phillipe",
-  user_id: User.last.id
+  title: "Hand Painting",
+  user_id: User.third.id,
+  workshop_id: Workshop.first.id
 )
 post_2.photo.attach(io: file, filename: 'post_2.jpg', content_type: 'image/jpg')
 
@@ -193,8 +270,9 @@ post_2.photo.attach(io: file, filename: 'post_2.jpg', content_type: 'image/jpg')
 
 file = URI.open('https://images.unsplash.com/photo-1552312097-8ef75595e2a2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1300&q=80')
 post_3 = Post.create!(
-  title: "Lei",
-  user_id: User.last.id
+  title: "Abstract Art on Canvas",
+  user_id: User.fourth.id,
+  workshop_id: Workshop.first.id
 )
 post_3.photo.attach(io: file, filename: 'post_3.jpg', content_type: 'image/jpg')
 
@@ -202,8 +280,9 @@ post_3.photo.attach(io: file, filename: 'post_3.jpg', content_type: 'image/jpg')
 
 file = URI.open('https://images.unsplash.com/photo-1523554888454-84137e72c3ce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80')
 post_4 = Post.create!(
-  title: "Nina",
-  user_id: User.last.id
+  title: "Opened my creative Eye",
+  user_id: User.fifth.id,
+  workshop_id: Workshop.first.id
 )
 post_4.photo.attach(io: file, filename: 'post_4.jpg', content_type: 'image/jpg')
 
@@ -211,8 +290,9 @@ post_4.photo.attach(io: file, filename: 'post_4.jpg', content_type: 'image/jpg')
 
 file = URI.open('https://images.unsplash.com/photo-1556760891-018194410847?ixlib=rb-1.2.1&auto=format&fit=crop&w=1502&q=80')
 post_5 = Post.create!(
-  title: "Lisa",
-  user_id: User.last.id
+  title: "Acrylic on Plates",
+  user_id: User.last.id,
+  workshop_id: Workshop.first.id
 )
 post_5.photo.attach(io: file, filename: 'post_5.jpg', content_type: 'image/jpg')
 
