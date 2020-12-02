@@ -21,11 +21,14 @@
 <div class="center flex-it">
     <div class="workshop-discription">
     <div class="workshop-content-left">
-      <h4>Ready To Start?</h4>
+      <h4>What you will Learn?</h4>
       <img class="red-line" src="https://res.cloudinary.com/dxdboxbyb/image/upload/v1606232604/atelier-celine/Landing%20Page/cluepznhimc95jwz0ono.png" alt="">
       <div>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      </div>
+      In this workshop, you will learn how to make cyanotype emulsion and make cyanotype prints at home. and then change the colour with tea extract. Our creative journey goes along with the poem by a Japanese haiku poet, Yosa Buson.
+      Shining on the sea
+      dazzling sunlight shaking over
+      hills of flower-bloom
+    </div>
     </div>
   <div class="duration-level-bar align-items-center">
     <div>
@@ -113,7 +116,7 @@
   </div>
 
   <div class="community-cards center">
-    
+
     <% @workshop.posts.each do |post|%>
       <% if post.photo.attached? %>
         <% background_url = cl_image_path post.photo.key, width: 300, height: 400, crop: :fill %>
@@ -126,7 +129,7 @@
         <%= post.user.username %>
       </div>
     <% end %>
-  
+
   </div>
 
     <%= link_to "Share your Work",  new_workshop_post_path(@workshop), class: "button-social" %>

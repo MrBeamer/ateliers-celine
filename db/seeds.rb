@@ -41,6 +41,8 @@ cyanotype = Workshop.create!(
 cyanotype.photo.attach(io: file, filename: 'cyanotype.jpg', content_type: 'image/jpg')
 # cyanotype.pdf.attach(io: pdf, filename: 'cyanotype.pdf', content_type: 'application/pdf')
 
+# workshop steps
+
 cyanotype_step_one = Step.create!(
   title: "Making Cyanotype Emulsion",
   description: "The recipe we will give you will make up to 10-15 A5 size prints. The cyanotype is made out of two simple solutions:
@@ -98,6 +100,8 @@ cyanotype_step_six = Step.create!(
   youtube_url: "H6Xj-Eq0Dio",
   workshop_id: cyanotype.id
 )
+
+# Workshops
 
 file = URI.open('https://images.unsplash.com/photo-1501632865397-94246a9f1521?ixlib=rb-1.2.1&auto=format&fit=crop&w=2588&q=80')
 botanically = Workshop.create!(
@@ -167,7 +171,56 @@ landscape = Workshop.create!(
 landscape.photo.attach(io: file, filename: 'landscape.jpg', content_type: 'image/jpg')
 
 
+# posts
+
+file = URI.open('https://images.unsplash.com/photo-1569172122301-bc5008bc09c5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80')
+post_1 = Workshop.create!(
+  title: "James",
+  user_id: User.last.id
+)
+post_1.photo.attach(io: file, filename: 'post_1.jpg', content_type: 'image/jpg')
+
+
+
+file = URI.open('https://images.unsplash.com/photo-1526304760382-3591d3840148?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80')
+post_2 = Workshop.create!(
+  title: "Phillipe",
+  user_id: User.last.id
+)
+post_2.photo.attach(io: file, filename: 'post_2.jpg', content_type: 'image/jpg')
+
+
+
+file = URI.open('https://images.unsplash.com/photo-1552312097-8ef75595e2a2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1300&q=80')
+post_3 = Workshop.create!(
+  title: "Lei",
+  user_id: User.last.id
+)
+post_3.photo.attach(io: file, filename: 'post_3.jpg', content_type: 'image/jpg')
+
+
+
+file = URI.open('https://images.unsplash.com/photo-1523554888454-84137e72c3ce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80')
+post_4 = Workshop.create!(
+  title: "Nina",
+  user_id: User.last.id
+)
+post_4.photo.attach(io: file, filename: 'post_4.jpg', content_type: 'image/jpg')
+
+
+
+file = URI.open('https://images.unsplash.com/photo-1556760891-018194410847?ixlib=rb-1.2.1&auto=format&fit=crop&w=1502&q=80')
+post_5 = Workshop.create!(
+  title: "Lisa",
+  user_id: User.last.id
+)
+post_5.photo.attach(io: file, filename: 'post_5.jpg', content_type: 'image/jpg')
+
+
+
+
 puts "Complete, created #{Workshop.count} workshops."
 puts "Complete, created #{User.count} user."
+puts "Complete, created #{Post.count} posts."
 
 # they were all called workshop before
