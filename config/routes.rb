@@ -9,6 +9,9 @@ Rails.application.routes.draw do
       get :instructions
       post :mark_as_done, to: "workshops#mark_as_done"
     end
+
+    resources :posts, only: [:new, :create, :index]
+    
   end
  
 

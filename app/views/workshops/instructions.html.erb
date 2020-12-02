@@ -69,13 +69,14 @@
 
 
 <div class="center mid">
+    <% counter = 1 %>
     <div class="workshop-discription">
     <div class="workshop-content-left">
        <div>
     <% @workshop.steps.each do |step| %>
     <div class="instruction-single-box">
     <div class="instructions-title">
-      <h4> <%= step.title %> </h4>
+      <h4> <%= counter %>. <%= step.title %> </h4>
     </div>
 
     <div class="instructions-description">
@@ -83,11 +84,12 @@
     </div>
 
     <div class="progress-button">
-      <%= link_to "Done", mark_as_done_workshop_path(:step_id => step.id), method: :post, class: "button-pink timeline-button",  id: "done_#{step.id}" %>
+      <%= link_to "Mark as Done", mark_as_done_workshop_path(:step_id => step.id), method: :post, class: "button-minimal-thicker timeline-button",  id: "done_#{step.id}" %>
     </div>
 
     </div>
     <hr>
+    <% counter += 1 %>
     <% end %>
   </div>
     </div>
@@ -134,7 +136,7 @@
       Lisa
     </div>
   </div>
-    <%= link_to "Share your Work", root_path, class: "button-social" %>
+    <%= link_to "Share your Work",  new_workshop_post_path(@workshop), class: "button-social" %>
 </div>
 
 </div>
@@ -143,14 +145,4 @@
 
 
 
-<div id="instructions-container">
-  <div>
-    <% counter = 1 %>
-    <% @workshop.steps.each do |step| %>
-    <div id="timeline-inline">
-      <p id="ball_<%= step.id %>" class="ball"> <%= counter %>.<p>
-      <% counter += 1 %>
-    </div>
-    <% end %>
-  </div>
 

@@ -5,4 +5,5 @@ class Workshop < ApplicationRecord
   has_rich_text :workshop_content
   has_one_attached :photo
   has_one_attached :pdf
+  has_many :posts
 end

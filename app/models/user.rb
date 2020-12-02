@@ -10,6 +10,7 @@ class User < ApplicationRecord
   has_one_attached :photo
   has_many :user_steps
   has_many :steps, through: :user_steps
+  has_many :posts
 
   #validates :username, :first_name, :last_name, :country, :city, :state, :postcode, :street, presence: true
   #validates :username, uniqueness: true
