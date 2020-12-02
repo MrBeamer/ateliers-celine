@@ -174,7 +174,7 @@ landscape.photo.attach(io: file, filename: 'landscape.jpg', content_type: 'image
 # posts
 
 file = URI.open('https://images.unsplash.com/photo-1569172122301-bc5008bc09c5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80')
-post_1 = Workshop.create!(
+post_1 = Post.create!(
   title: "James",
   user_id: User.last.id
 )
@@ -183,7 +183,7 @@ post_1.photo.attach(io: file, filename: 'post_1.jpg', content_type: 'image/jpg')
 
 
 file = URI.open('https://images.unsplash.com/photo-1526304760382-3591d3840148?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80')
-post_2 = Workshop.create!(
+post_2 = Post.create!(
   title: "Phillipe",
   user_id: User.last.id
 )
@@ -192,7 +192,7 @@ post_2.photo.attach(io: file, filename: 'post_2.jpg', content_type: 'image/jpg')
 
 
 file = URI.open('https://images.unsplash.com/photo-1552312097-8ef75595e2a2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1300&q=80')
-post_3 = Workshop.create!(
+post_3 = Post.create!(
   title: "Lei",
   user_id: User.last.id
 )
@@ -201,7 +201,7 @@ post_3.photo.attach(io: file, filename: 'post_3.jpg', content_type: 'image/jpg')
 
 
 file = URI.open('https://images.unsplash.com/photo-1523554888454-84137e72c3ce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80')
-post_4 = Workshop.create!(
+post_4 = Post.create!(
   title: "Nina",
   user_id: User.last.id
 )
@@ -210,7 +210,7 @@ post_4.photo.attach(io: file, filename: 'post_4.jpg', content_type: 'image/jpg')
 
 
 file = URI.open('https://images.unsplash.com/photo-1556760891-018194410847?ixlib=rb-1.2.1&auto=format&fit=crop&w=1502&q=80')
-post_5 = Workshop.create!(
+post_5 = Post.create!(
   title: "Lisa",
   user_id: User.last.id
 )
