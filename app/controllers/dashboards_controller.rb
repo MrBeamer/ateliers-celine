@@ -3,5 +3,6 @@ class DashboardsController < ApplicationController
   
   def index
     authorize self
+    
   end
 end

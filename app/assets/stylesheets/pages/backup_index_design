@@ -30,11 +30,11 @@
     <!--     <%= cl_image_upload_tag(:iamge_id) %> -->
 
 
-    <% if @user.avatar.attached? %>
-            <%= cl_image_tag @user.avatar.key, class: "avatar-large dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+    <% if @user.photo.attached? %>
+            <%= cl_image_tag @user.photo.key, class: "avatar-large dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <%else %>
                 <%= image_tag "https://avatarfiles.alphacoders.com/263/263699.jpg", class: "avatar-large dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-          <% end %>
+    <% end %>
 
 
 
