@@ -60,7 +60,15 @@
   background: #C41A49;
 }
 
-
+.button-minimal-thicker-pink{
+  border: 2px solid #C41A49;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 2px 120px;
+  color: white;
+  font-weight: bolder;
+  background: #C41A49;
+}
 
 // login and sign up
 .button-pink-devise {
