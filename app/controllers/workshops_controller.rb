@@ -29,6 +29,7 @@ class WorkshopsController < ApplicationController
     authorize @step
   end
 
+  
   private 
 
   def workshop_content_params

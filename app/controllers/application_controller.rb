@@ -14,6 +14,10 @@ class ApplicationController < ActionController::Base
   #   redirect_to(root_path)
   # end
 
+  def index
+    @user = current_user
+  end
+
   private
 
   def skip_pundit?

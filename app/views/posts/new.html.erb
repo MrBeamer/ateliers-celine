@@ -1,0 +1,9 @@
+
+  <div id="form-content" >
+    <h1>Add a new Game as Rental</h1>
+  <%= simple_form_for [@workshop, @post] do |f| %>
+    <%= f.input :title %>
+    <%= f.input :photo, as: :file %>
+    <%= f.submit "Make Post", class: "button-pink" %>
+  <% end %>
+  </div>

@@ -7,8 +7,14 @@
     <div id="profile">
 
       <div id="profile-picture">
-        <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=634&q=80" alt="user picture">
+        <% if current_user.photo.attached? %>
+          <%= cl_image_tag current_user.photo.key %>
+        <%else %>
+          <%= image_tag "https://avatarfiles.alphacoders.com/263/263699.jpg" %>
+        <% end %>
       </div>
+    
+
 
       <div id="profile-description">
         <h5> <%= @user.username %></h5>
