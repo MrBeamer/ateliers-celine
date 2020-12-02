@@ -13,6 +13,9 @@
       <p> <strong>State:</strong> <%= @user.state %> </p>
       <p> <strong>Postcode:</strong> <%= @user.postcode %> </p>
       </div>
+      <div class="button-adress-change-box">
+        <%= link_to "Edit Address", edit_user_registration_path, class: "button-adress-change" %>
+      </div>
     </div>
     <div class="center">
   <div class="order-box">
@@ -29,14 +32,8 @@
       </div>
         <% end %>
       </div>
-    </div>
-  </div>
-</div>
-  </div>
-</div>
 
-  <div class="center-child">
-      <div class="order-box">
+            <div class="order-box">
     <div class="workshop-content-left">
       <button id="pay" class="button-payment">Confirm Checkout</button>
       <script src="https://js.stripe.com/v3/"></script>
@@ -51,7 +48,17 @@
       </script>
     </div>
   </div>
+
+    </div>
   </div>
+</div>
+  </div>
+
+</div>
+
+
+
+
 
 
 </div>

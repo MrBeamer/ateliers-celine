@@ -7,7 +7,7 @@
   padding-bottom: 20px;
   padding-top: 30px;
   padding-left: 30px;
-  padding-right: 30px;
+  width: 555px;
 }
 
 .order-image {
@@ -54,19 +54,43 @@ background-color: #CCD2E9;
   color: white;
 }
 
+
+
 .button-payment {
   background-color: #455CC7;
   border: 1px none black;
-
+  margin-top: 50px;
   font-weight: bold;
   color: white;
   padding: 15px 200px;
   border-radius: 5px;
   box-shadow: 2px 2px 3px rgba(50, 50, 50, 0.4);
-  // margin-left: 50px;
 }
 .button-payment:hover {
   opacity: 0.9;
   text-decoration: none;
   color:white;
 }
+
+
+.button-adress-change-box {
+  margin-top: 66px;
+
+}
+
+.button-adress-change {
+  background-color: #455CC7;
+  border: 1px none black;
+  font-weight: bold;
+  color: white;
+  padding: 18px 80px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 3px rgba(50, 50, 50, 0.4);
+}
+
+.button-adress-change:hover {
+  opacity: 0.9;
+  text-decoration: none;
+  color:white;
+}
+
