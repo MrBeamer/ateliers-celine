@@ -116,13 +116,13 @@
 
 
 <div id="community-section" class="banner-blue">
-  <div>
+  <div id="posts_all">
     <h1>Community <br> #WeAreCéline</h1>
     <img class="blue-line" src="https://res.cloudinary.com/dxdboxbyb/image/upload/v1606232604/atelier-celine/Landing%20Page/cluepznhimc95jwz0ono.png" alt="">
   </div>
 
   <div class="community-cards center">
-    
+
     <% @workshop.posts.each do |post|%>
       <% if post.photo.attached? %>
         <% background_url = cl_image_path post.photo.key, width: 300, height: 400, crop: :fill %>
@@ -147,7 +147,7 @@
     <h4>What Crafters think? </h4>
     <img class="red-line" src="https://res.cloudinary.com/dxdboxbyb/image/upload/v1606232604/atelier-celine/Landing%20Page/cluepznhimc95jwz0ono.png" alt="">
   </div>
-  <div class="reviews"> 
+  <div class="reviews">
     <% @workshop.reviews.each do |review|  %>
     <div class="review">
       <p> <%= review.rating %></p>
