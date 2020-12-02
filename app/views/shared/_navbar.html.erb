@@ -23,7 +23,12 @@
           <%= link_to "#WeAreCéline", workshops_path, class: "nav-link pad" %>
         </li>
         <li class="nav-item dropdown">
-                          <%= image_tag "https://avatarfiles.alphacoders.com/263/263699.jpg", class: "avatar-large dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          
+          <% if current_user.photo.attached? %>
+            <%= cl_image_tag current_user.photo.key, :width =>100, :height => 100, class: "avatar-large dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <%else %>
+            <%= image_tag "https://avatarfiles.alphacoders.com/263/263699.jpg", class: "avatar-large dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <% end %>
 
 
 
