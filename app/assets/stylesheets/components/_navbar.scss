@@ -1,6 +1,10 @@
 .navbar-lewagon {
-  justify-content: space-between;
   background: white;
+}
+
+.navbar-space {
+   justify-content: space-between;
+
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -29,12 +33,23 @@ font-weight: 700;
 .nav-img {
   height: auto;
   width: auto;
-  // "https://res.cloudinary.com/dxdboxbyb/image/upload/v1606155677/atelier-celine/xtnumel8ux618dntifyn.jpg"
+
+}
+
+.navbar-brand {
+ padding-right: 0;
+  margin-right: 0;
 }
 
 .nav-link{
   color: black!important;
 
+}
+
+
+.word-logo {
+height: 35px;
+margin-right: 70px;
 }
 
 .pad {

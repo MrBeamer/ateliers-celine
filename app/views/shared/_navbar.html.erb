@@ -1,8 +1,10 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon nav-own">
-  <%= link_to "/", class: "navbar-brand" do %>
+  <div navbar-space>
+    <%= link_to "/", class: "navbar-brand" do %>
     <%= image_tag "https://res.cloudinary.com/dxdboxbyb/image/upload/v1606156054/atelier-celine/jublitpripa5ijbpcoxt.jpg", class: "nav-img" %>
     <% end %>
-
+  </div>
+    <%= image_tag "https://res.cloudinary.com/dxdboxbyb/image/upload/v1606155677/atelier-celine/xtnumel8ux618dntifyn.jpg", class: "nav-img word-logo" %>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -23,7 +25,7 @@
           <%= link_to "#WeAreCéline", workshops_path, class: "nav-link pad" %>
         </li>
         <li class="nav-item dropdown">
-          
+
           <% if current_user.photo.attached? %>
             <%= cl_image_tag current_user.photo.key, :width =>100, :height => 100, class: "avatar-large dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <%else %>
