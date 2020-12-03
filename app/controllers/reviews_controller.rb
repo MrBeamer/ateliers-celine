@@ -20,7 +20,7 @@ class ReviewsController < ApplicationController
   end
 
   def index
-    @reviews = policy_scope(Review).order(created_at: :desc)
+    @reviews = policy_scope(Review).order(created_at: :asc)
   end
 
   private
