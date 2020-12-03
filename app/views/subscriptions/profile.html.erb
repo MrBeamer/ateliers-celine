@@ -10,7 +10,7 @@
         <% if current_user.photo.attached? %>
           <%= cl_image_tag current_user.photo.key %>
         <%else %>
-          <%= image_tag "https://avatarfiles.alphacoders.com/263/263699.jpg" %>
+          <%= image_tag "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" %>
         <% end %>
       </div>
     
@@ -23,6 +23,8 @@
           <i class="fas fa-envelope"> </i> <%= @user.email %> <br>
           <i class="fas fa-map-marker-alt"></i> <%= @user.street %>, <%= @user.postcode %> <%= @user.city %>
         </div>
+  
+
         <br>
 
         <% if @user.bio == "" || @user.bio==nil %>
@@ -52,7 +54,8 @@
             <% background_url = cl_image_path workshop.photo.key, width: 300, height: 400, crop: :fill %>
               <div class="test">
                 <div class="index-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= background_url %>')"></div>
-                    <p> <strong><%= workshop.name %></strong> </p>
+                    <p> <strong><%= workshop.name %> </strong> </p>
+                    <p> <%= @usersteps_done.length %>/<%= @usersteps.length %> steps completed </p>
                     <p><%= workshop.artist_name %></p>
                     <p style="font-size: 15px; color: #455CC7; font-weight: bold;"><%= workshop.category.upcase %></p>
                     <p> <%= link_to "Instructions", instructions_workshop_path(workshop), class: "button-minimal-thicker" %></p>

@@ -32,6 +32,7 @@ import { change_form } from "./../components/change_form"
 import { selectCardOne } from "./../components/subscription_card_select_one"
 import { selectCardThree } from "./../components/subscription_card_select_three"
 import { buttonDone } from "./../components/timeline"
+import { anchorFunction } from "./../components/timeline"
 import { resetProgress } from "./../components/timeline"
 
 
@@ -39,6 +40,7 @@ document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
   buttonDone();
+  anchorFunction();
   checkboxlimit(document.getElementsByClassName("workshop"), 3)
   change_form();
   selectCardOne();
