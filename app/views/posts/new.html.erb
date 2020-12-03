@@ -1,13 +1,13 @@
 <div class="form-box">
     <div class="form-image">
-        <img src="https://images.unsplash.com/photo-1555338072-915a8fae3a2b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1320&q=80s">
+        <img src="https://images.fineartamerica.com/images-medium-large-5/red-cityscape-abstract-painting-fine-art-print-laura-carter.jpg">
   </div>
 <div class="form-stuff">
  <div class="form-text">
     <h1 id="form-headline">Share a picture of your work</h1>
   <%= simple_form_for [@workshop, @post] do |f| %>
     <%= f.input :title %>
-    <%= f.input :photo, as: :file %>
+    <%= f.input :photo, label: "Upload picture", as: :file %>
     <%= f.submit "Share your Work", class: "button-form-all" %>
   <% end %>
   </div>
