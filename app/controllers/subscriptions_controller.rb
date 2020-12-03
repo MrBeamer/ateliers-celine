@@ -71,6 +71,15 @@ class SubscriptionsController < ApplicationController
   def profile
     @user = current_user
     @subscription = @user.subscriptions
+    @usersteps = @user.user_steps
+    @usersteps_done = []
+
+    @usersteps.each do |userstep|
+      if userstep.done == true
+        @usersteps_done << userstep
+      end
+    end
+
     authorize @subscription
 
     @workshops = @user.subscriptions[0].workshops if !@user.subscriptions.empty?

@@ -23,7 +23,7 @@ function buttonDone() {
     bar.classList.toggle(`progress-bar_${index+1}`);
     button.classList.toggle("button-minimal-thicker-pink")
     if (button.innerHTML === "Reset Progress") {
-      button.innerHTML = "Mark as Done";
+      button.innerHTML = "Step completed";
     } else {
       button.innerHTML = "Reset Progress";
     }
@@ -32,6 +32,23 @@ function buttonDone() {
   });
 } 
 
+function anchorFunction() {
+
+  
+  const buttons = document.querySelectorAll(".timeline-button");
+ 
+  buttons.forEach( (button, index) => {
+    button.addEventListener("click", (event) => {
+      const step = document.querySelector(`#step`)
+      location.href = `#step-${parseInt(button.dataset.step)+1}`;
+    }
+  )
+
+  });
+} 
+
+
 
 
 export { buttonDone }
+export { anchorFunction }
