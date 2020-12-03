@@ -97,7 +97,7 @@ user_five = User.create!(
   phone: "00491603308134"
 )
 
-file = URI.open('https://images.unsplash.com/photo-1554668082-50d9cd32f406?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80')
+file = URI.open('https://www.wiregrassmuseum.org/wp-content/uploads/2017/10/Scott-Stephens-Riverbend-scaled.jpg')
 # pdf = URI.open("https://res.cloudinary.com/yileijiang/image/upload/v1606811531/qk73ftw9xpqspe526pohouyahb82.pdf")
 cyanotype = Workshop.create!(
   name: "Cyanotype",
