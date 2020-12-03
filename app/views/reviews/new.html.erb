@@ -1,9 +1,10 @@
-
+<div class="container">
  <div id="form-content" >
     <h1>Post a review of the workshop!</h1>
   <%= simple_form_for [@workshop, @review] do |f| %>
     <%= f.input :rating %>
     <%= f.input :comment %>
-    <%= f.submit "Leave a review", class: "button-pink" %>
+    <%= f.submit "Leave a review", class: "button-pink-devise" %>
   <% end %>
   </div>
+</div>

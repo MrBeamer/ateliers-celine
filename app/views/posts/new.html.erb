@@ -1,9 +1,13 @@
-
+  <div class="container">
   <div id="form-content" >
     <h1>Post a picture of your work!</h1>
   <%= simple_form_for [@workshop, @post] do |f| %>
     <%= f.input :title %>
     <%= f.input :photo, as: :file %>
-    <%= f.submit "Make Post", class: "button-pink" %>
+    <%= f.submit "Make Post", class: "button-pink-devise" %>
   <% end %>
   </div>
+</div>
+
+
+
