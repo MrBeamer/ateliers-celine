@@ -100,3 +100,18 @@ margin-bottom: 20px;
   color: white;
   background-color: #4054aa;
 }
+
+.button-minimal-thicker-subscription{
+  border: 2px solid #4054aa;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 2px 107px;
+  color: #4054aa;
+  font-weight: bolder;
+  background: white;
+}
+.button-minimal-thicker-subscription:hover {
+  text-decoration: none;
+  color: white;
+  background: #4054aa;
+}
