@@ -10,8 +10,6 @@
   margin-left: 50px;
 }
 
-
-
 //banner
 
 .instructions-banner {
@@ -140,7 +138,7 @@ text-align: center;
   width: 66.68%;
 }
 
-.progress-bar_5 {
+.progress-bar_ {
   background-color: #C41A49;
   width: 83.35%;
 }
@@ -166,15 +164,12 @@ margin-bottom: 50px;
 //left instruction side
 
 .instruction-single-box {
-  height: 322 px;
+height: 322 px;
+padding-bottom: 165px;
 }
-
-
 
 .instructions-description {
   margin-top: 50px;
-  width: 50%;
-  margin-right: 10px;
 }
 
 .progress-button {
@@ -184,17 +179,9 @@ margin-bottom: 50px;
 //right instruction side
 
 .instruction-video {
-  margin-top: 50px;
-  margin-left: 40px;
-  height: 322 px;
+margin-bottom: 50px;
+margin-top: 50px;
 }
-
-.move-videos-right{
-  display:flex;
-}
-
-// button
-
 
 // Social section
 
@@ -221,28 +208,6 @@ margin-bottom: 50px;
   margin-bottom: 90px;
  }
 
-//test
-.card-header h5{
-width: 100%;
-}
-
-
-.btn-link {
-  // border: 2px solid #C41A49;
-  // box-sizing: border-box;
-  // border-radius: 5px;
-  // padding: 2px 120px;
-  color: #C41A49;
-  // font-weight: bolder;
-  // background: white;
-    text-decoration: none;
-}
-
-.btn-link:hover {
-  text-decoration: none;
-  color: white;
-  background: #C41A49;
-}
 
 
 
