@@ -51,7 +51,7 @@
     <% @workshops.each do |workshop| %>
      <% background_url = cl_image_path workshop.photo.key, width: 300, height: 400, crop: :fill %>
       <div class="test">
-        <div class="index-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= background_url %>')">
+        <div class="index-card" style="background-image: url('<%= background_url %>')">
           </div>
             <p> <strong><%= workshop.name %></strong> </p>
             <p><%= workshop.artist_name %></p>
@@ -61,5 +61,6 @@
     <% end %>
   </div>
 </div>
-<!-- https://images.unsplash.com/photo-1554668082-50d9cd32f406?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80
+
+<!--  linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
  -->

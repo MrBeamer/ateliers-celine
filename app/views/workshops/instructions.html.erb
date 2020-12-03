@@ -7,6 +7,7 @@
     <img class="blue-line" src="https://res.cloudinary.com/dxdboxbyb/image/upload/v1606232604/atelier-celine/Landing%20Page/lqztsqrpdeth0ncdjkk6.png" alt="">
     <h3><%= @workshop.artist_name  %></h3>
     <p>You will learn the ancient technique of Cyanotype from our creative master Dimi and Yuko.</p>
+    <%= link_to "Leave a Review", new_workshop_review_path(@workshop), class: "subscription-btn margin-left" %>
   </div>
   <div class="instructions-image">
     <div>
@@ -23,11 +24,13 @@
     <div class="workshop-content-left">
       <h4>What you will Learn?</h4>
       <img class="red-line" src="https://res.cloudinary.com/dxdboxbyb/image/upload/v1606232604/atelier-celine/Landing%20Page/cluepznhimc95jwz0ono.png" alt="">
-      <div> In this workshop, you will learn how to make cyanotype emulsion and make cyanotype prints at home. and then change the colour with tea extract. Our creative journey goes along with the poem by a Japanese haiku poet, Yosa Buson.
+      <div>
+      In this workshop, you will learn how to make cyanotype emulsion and make cyanotype prints at home. and then change the colour with tea extract.
+      Our creative journey goes along with the poem by a Japanese haiku poet, Yosa Buson.
       Shining on the sea
-      dazzling sunlight shaking over 
+      dazzling sunlight shaking over
       hills of flower-bloom
-      </div>
+    </div>
     </div>
   <div class="duration-level-bar align-items-center">
     <div>
@@ -71,88 +74,72 @@
 
 
 <div class="center mid">
+    <% counter = 1 %>
     <div class="workshop-discription">
     <div class="workshop-content-left">
        <div>
     <% @workshop.steps.each do |step| %>
     <div class="instruction-single-box">
     <div class="instructions-title">
-      <h4> <%= step.title %> </h4>
+      <h4> <%= counter %>. <%= step.title %> </h4>
     </div>
 
+
+  <div class="move-videos-right">
     <div class="instructions-description">
     <%= step.description %>
     </div>
-
-    <div class="progress-button">
-      <%= link_to "Done", mark_as_done_workshop_path(:step_id => step.id), method: :post, class: "button-pink timeline-button",  id: "done_#{step.id}" %>
-    </div>
-
-    </div>
-    <hr>
-    <% end %>
-  </div>
-    </div>
-
-  <div>
-    <% @workshop.steps.each do |step| %>
     <div class="instruction-video">
       <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= step.youtube_url %>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
+  </div>
+    <div class="progress-button">
+      <%= link_to "Mark as Done", mark_as_done_workshop_path(:step_id => step.id), method: :post, class: "button-minimal-thicker timeline-button",  id: "done_#{step.id}" %>
+    </div>
+
+    </div>
+    <% counter += 1 %>
     <hr>
     <% end %>
   </div>
+    </div>
 </div>
   </div>
 
 
-<div id="community-section" class="banner-blue">
+<div id="community-section" class="banner-blue move-up">
   <div>
-    <h1>Share Your Work on Instagram #WeAreCéline</h1>
+    <h1>Share Your Work on <br> #WeAreCéline</h1>
     <img class="blue-line" src="https://res.cloudinary.com/dxdboxbyb/image/upload/v1606232604/atelier-celine/Landing%20Page/cluepznhimc95jwz0ono.png" alt="">
   </div>
 
   <div class="community-cards center">
-    <div class="community-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1569172122301-bc5008bc09c5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80)">
-      Phillipe
-    </div>
 
-    <div class="community-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1526304760382-3591d3840148?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80)">
-      Lei
-    </div>
-
-    <div class="community-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1552312097-8ef75595e2a2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1300&q=80)">
-      Tom
-    </div>
-    <div class="community-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1523554888454-84137e72c3ce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80)">
-      James
-    </div>
-
-    <div class="community-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1555420087-62ca236e0256?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1306&q=80)">
-      Nina
-    </div>
-
-    <div class="community-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1556760891-018194410847?ixlib=rb-1.2.1&auto=format&fit=crop&w=1502&q=80)">
-      Lisa
-    </div>
-  </div>
-    <%= link_to "Share your Work", root_path, class: "button-social" %>
-</div>
-
-</div>
+    <% @workshop.posts.limit(6).each do |post|%>
+      <% if post.photo.attached? %>
+        <% background_url = cl_image_path post.photo.key, width: 300, height: 400, crop: :fill %>
+      <% else %>
+        <% background_url = 'https://i.redd.it/d5g2jaawgw431.jpg'%>
+      <% end %>
 
 
-
-
-
-<div id="instructions-container">
-  <div>
-    <% counter = 1 %>
-    <% @workshop.steps.each do |step| %>
-    <div id="timeline-inline">
-      <p id="ball_<%= step.id %>" class="ball"> <%= counter %>.<p>
-      <% counter += 1 %>
-    </div>
+      <div class="community-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= background_url %>')">
+       <div class="community-flex-column">
+        <p> <%= post.title %> </p>
+        <p> <%= post.user.username %> </p>
+       </div>
+      </div>
     <% end %>
+
   </div>
+
+    <%= link_to "Share your Work",  new_workshop_post_path(@workshop), class: "button-social" %>
+</div>
+
+</div>
+
+
+
+
+
 

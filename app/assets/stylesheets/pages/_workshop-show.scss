@@ -146,7 +146,7 @@ margin-left: 50px;
 
 .experience-icons p {
 font-size: 22px;
-color: #C41A49;
+color: black;
 }
 
 
@@ -157,6 +157,7 @@ color: #C41A49;
 
 .fa-plus {
 margin-top: 40px;
+color: #C41A49;
 }
 
 // 3 Section - Physical Kit
@@ -194,9 +195,11 @@ text-align: center;
 
 .banner-blue {
   background-color: #455CC7;
-  height: 640px;
+  min-height: 650px;
   display: flex;
   flex-direction: column;
+  overflow:hidden;
+  padding-bottom: 40px;
 }
 
 .banner-blue h1 {
@@ -215,6 +218,14 @@ text-align: center;
 }
 
 // Reviews
+
+.reviews {
+  width: 1350px;
+}
+.review {
+  width: 450px;
+}
+
 .reviews p {
   color: black;
   font-size: 25px;
@@ -234,3 +245,10 @@ margin-top: 60px;
 .review .review-username {
  color: #455CC7;
 }
+
+.fa-star {
+color:#DAB300;
+  margin-top: 15px;
+  margin-bottom: 12px;
+}
+

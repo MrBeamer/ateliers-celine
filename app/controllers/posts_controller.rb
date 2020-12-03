@@ -14,12 +14,13 @@ class PostsController < ApplicationController
     @post.user = current_user
     @post.workshop = @workshop
     if @post.save
-      redirect_to instructions_workshop_path(@workshop)
+      # redirect_to workshop_path(@workshop, anchor: "posts_all")
+      redirect_to posts_path(anchor: "posts_all")
     else
       render :new
     end
   end
-  
+
   def index
     @posts = policy_scope(Post).order(created_at: :desc)
   end

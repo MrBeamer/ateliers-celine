@@ -6,4 +6,5 @@ class Workshop < ApplicationRecord
   has_one_attached :photo
   has_one_attached :pdf
   has_many :posts
+  has_many :reviews
 end
