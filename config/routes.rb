@@ -10,12 +10,12 @@ Rails.application.routes.draw do
       post :mark_as_done, to: "workshops#mark_as_done"
     end
 
-    resources :posts, only: [:new, :create, :index]
+    resources :posts, only: [:new, :create]
     resources :reviews, only: [:new, :create, :index]
     
   end
  
-
+  resources :posts, only: [:index]
 
   resources :subscriptions, only: [:index, :new, :create, :show] do
     resources :orders, only: [:new, :create]
