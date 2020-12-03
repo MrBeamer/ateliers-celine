@@ -124,7 +124,7 @@
   <div class="community-cards center">
 
     
-    <% @workshop.posts.limit(6).each do |post|%>
+    <% @workshop.posts.reverse.first(6).each do |post|%>
       <% if post.photo.attached? %>
         <% background_url = cl_image_path post.photo.key, width: 300, height: 400, crop: :fill %>
       <% else %>
@@ -149,7 +149,7 @@
     <img class="red-line" src="https://res.cloudinary.com/dxdboxbyb/image/upload/v1606232604/atelier-celine/Landing%20Page/cluepznhimc95jwz0ono.png" alt="">
   </div>
   <div class="reviews">
-    <% @workshop.reviews.each do |review|  %>
+    <% @workshop.reviews.reverse.first(3).each do |review|  %>
     <div class="review">
       <% case review.rating %>
 <%when 1%>
