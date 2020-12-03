@@ -92,25 +92,22 @@
     <div class="instruction-video">
       <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= step.youtube_url %>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
-    <hr>
   </div>
-
     <div class="progress-button">
       <%= link_to "Step completed", mark_as_done_workshop_path(:step_id => step.id), method: :post, class: "button-minimal-thicker timeline-button", data: {step: "#{step.id}"} %>
     </div>
 
     </div>
-    <hr>
     <% counter += 1 %>
+    <hr>
     <% end %>
   </div>
     </div>
-
 </div>
   </div>
 
 
-<div id="community-section" class="banner-blue">
+<div id="community-section" class="banner-blue move-up">
   <div>
     <h1>Share Your Work on <br> #WeAreCéline</h1>
     <img class="blue-line" src="https://res.cloudinary.com/dxdboxbyb/image/upload/v1606232604/atelier-celine/Landing%20Page/cluepznhimc95jwz0ono.png" alt="">
@@ -118,7 +115,7 @@
 
   <div class="community-cards center">
 
-    <% @workshop.posts.reverse.first(6).each do |post|%>
+    <% @workshop.posts.limit(6).each do |post|%>
       <% if post.photo.attached? %>
         <% background_url = cl_image_path post.photo.key, width: 300, height: 400, crop: :fill %>
       <% else %>
@@ -127,8 +124,10 @@
 
 
       <div class="community-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= background_url %>')">
-        <%= post.title %>
-        <%= post.user.username %>
+       <div class="community-flex-column">
+        <p> <%= post.title %> </p>
+        <p> <%= post.user.username %> </p>
+       </div>
       </div>
     <% end %>
 
@@ -138,9 +137,6 @@
 </div>
 
 </div>
-
-
-
 
 
 

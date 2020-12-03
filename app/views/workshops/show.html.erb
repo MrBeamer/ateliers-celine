@@ -116,12 +116,13 @@
 
 
 <div id="community-section" class="banner-blue">
-  <div id="posts_all">
+  <div>
     <h1>Community <br> #WeAreCéline</h1>
     <img class="blue-line" src="https://res.cloudinary.com/dxdboxbyb/image/upload/v1606232604/atelier-celine/Landing%20Page/cluepznhimc95jwz0ono.png" alt="">
   </div>
 
   <div class="community-cards center">
+
 
     
     <% @workshop.posts.reverse.first(6).each do |post|%>
@@ -133,8 +134,10 @@
 
 
       <div class="community-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= background_url %>')">
-        <%= post.title %>
-        <%= post.user.username %>
+       <div class="community-flex-column">
+        <p> <%= post.title %> </p>
+        <p> <%= post.user.username %> </p>
+       </div>
       </div>
     <% end %>
   </div>
