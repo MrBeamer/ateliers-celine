@@ -120,9 +120,9 @@ cyanotype.photo.attach(io: file, filename: 'cyanotype.jpg', content_type: 'image
 
 cyanotype_step_one = Step.create!(
   title: "Making Cyanotype Emulsion",
-  description: "The recipe we will give you will make up to 10-15 A5 size prints. The cyanotype is made out of two simple solutions:
-•	Solution A: 2 grams Ferric ammonium citrate (green)
-•	Solution B: 0,8 grams Potassium ferricyanide (red)
+  description: "The recipe we will give you will make up to 10-15 A5 size prints. The cyanotype is made out of two simple solutions: \n
+•	Solution A: 2 grams Ferric ammonium citrate (green) \n
+•	Solution B: 0,8 grams Potassium ferricyanide (red) \n
 in 20 ml water that you will find inside the brown bottle
 A folded piece of paper can be used as a funnel. Take your bottle with the distilled water and dissolve the chemicals into it. Stir your solution properly till the chemical is dissolved. Unused solutions can be stored separately in the brown bottle away from light, but will not last very long once they have been mixed",
   youtube_url: "EZQDZyo63uc",
@@ -131,10 +131,10 @@ A folded piece of paper can be used as a funnel. Take your bottle with the disti
 
 cyanotype_step_two = Step.create!(
   title: "Application of the Emulsion on Papers",
-  description: "•	To apply the emulsion, it's best to use the pipette and fill it with your mixed emulsion
-  •	Now drop the emulsion evenly on the paper so you can spread it with your brush afterwards
-  •	Make sure to not leave the drops onto the surface for too long since the emulsion drops sink into the paper quite fast and it can leave nasty marks on your print later.
-  •	By using a brush you can just simply paint the chemical on your paper. The way you apply the chemical is affecting your result
+  description: "•	To apply the emulsion, it's best to use the pipette and fill it with your mixed emulsion \n
+  •	Now drop the emulsion evenly on the paper so you can spread it with your brush afterwards \n
+  •	Make sure to not leave the drops onto the surface for too long since the emulsion drops sink into the paper quite fast and it can leave nasty marks on your print later. \n
+  •	By using a brush you can just simply paint the chemical on your paper. The way you apply the chemical is affecting your result \n
   •	You can choose to brush very gently or go very rough to get a more picturesque brushstroke. Make sure your working area is dimly lit",
   youtube_url: "-mdOqI1cbrI",
   workshop_id: cyanotype.id
@@ -142,8 +142,8 @@ cyanotype_step_two = Step.create!(
 
 cyanotype_step_three = Step.create!(
   title: "Dry the Papers",
-  description: "•	Once the papers are coated, leave them to dry in the dark place
-  •	You can also use a blow dryer to fasten the drying process
+  description: "•	Once the papers are coated, leave them to dry in the dark place \n
+  •	You can also use a blow dryer to fasten the drying process \n
   •	If you use a blow-drier, Please make sure to flatten paper",
   youtube_url: "XroD5qNl9Wk",
   workshop_id: cyanotype.id
@@ -151,17 +151,17 @@ cyanotype_step_three = Step.create!(
 
 cyanotype_step_four = Step.create!(
   title: "Expose Your Papers",
-  description: "•	Put the contact frame outside for exposure
-  •	When you are in the season with higher sun and longer day time, you should look out for your print, because the print will be fully exposed in a few minutes
-  •	during the wintertime, when the day is shorter and cloudy, you might need 4-6 hours for the exposure",
+  description: "•	Put the contact frame outside for exposure \n
+  •	When you are in the season with higher sun and longer day time, you should look out for your print, because the print will be fully exposed in a few minutes \n
+  •	During the wintertime, when the day is shorter and cloudy, you might need 4-6 hours for the exposure",
   youtube_url: "sxTjmIoU52g",
   workshop_id: cyanotype.id
 )
 
 cyanotype_step_five = Step.create!(
   title: "Develop and Rinse the Photo",
-  description: "•	After exposing it in the sunlight you take your print out of the contact frame
-  •	It is sufficient to immerse the photo for a few minutes in a tray filled with tap water or just rinse it in your sink
+  description: "•	After exposing it in the sunlight you take your print out of the contact frame \n
+  •	It is sufficient to immerse the photo for a few minutes in a tray filled with tap water or just rinse it in your sink \n
   •	When rinsing, we have to be careful that the stream of water does not run directly on the image",
   youtube_url: "LFL5-e1aknM",
   workshop_id: cyanotype.id
@@ -169,8 +169,8 @@ cyanotype_step_five = Step.create!(
 
 cyanotype_step_six = Step.create!(
   title: "Dry it and ENJOY Your Beautiful Creation",
-  description: "•	Take the water out from the print with the kitchen paper towels.
-  •	And hang your prints, let it dry naturally.
+  description: "•	Take the water out from the print with the kitchen paper towels. \n
+  •	And hang your prints, let it dry naturally.\n
   •	If you want it to dry very quickly, you can also dry your paper with a blow drier",
   youtube_url: "H6Xj-Eq0Dio",
   workshop_id: cyanotype.id

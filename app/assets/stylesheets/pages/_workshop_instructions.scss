@@ -12,23 +12,6 @@
 
 
 
-.ball {
-  background-color: violet;
-  border-radius: 50%;
-  padding: 40px;
-  height: 50px;
-  width: 50px;
-}
-
-.ball-done {
-  background-color: red;
-  border-radius: 50%;
-  padding: 40px;
-  height: 50px;
-  width: 50px;
-}
-
-
 //banner
 
 .instructions-banner {
@@ -184,13 +167,14 @@ margin-bottom: 50px;
 
 .instruction-single-box {
   height: 322 px;
-
 }
 
 
 
 .instructions-description {
   margin-top: 50px;
+  width: 50%;
+  margin-right: 10px;
 }
 
 .progress-button {
@@ -200,13 +184,18 @@ margin-bottom: 50px;
 //right instruction side
 
 .instruction-video {
-margin-bottom: 50px;
- margin-top: 50px;
-height: 322 px;
+  margin-top: 50px;
+  margin-left: 40px;
+  height: 322 px;
 }
 
-.move-videos-down {
-// margin-top: 30px;
+.move-videos-right{
+  display:flex;
+}
+
+// button
+.timeline-button {
+
 }
 
 // Social section
@@ -228,6 +217,31 @@ height: 322 px;
   color: #C41A49;
   background: white;
 }
+
+//test
+.card-header h5{
+width: 100%;
+}
+
+
+.btn-link {
+  // border: 2px solid #C41A49;
+  // box-sizing: border-box;
+  // border-radius: 5px;
+  // padding: 2px 120px;
+  color: #C41A49;
+  // font-weight: bolder;
+  // background: white;
+    text-decoration: none;
+}
+
+.btn-link:hover {
+  text-decoration: none;
+  color: white;
+  background: #C41A49;
+}
+
+
 
 
 
