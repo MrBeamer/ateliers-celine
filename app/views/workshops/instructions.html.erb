@@ -92,20 +92,17 @@
     <div class="instruction-video">
       <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= step.youtube_url %>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
-    <hr>
   </div>
-
     <div class="progress-button">
       <%= link_to "Mark as Done", mark_as_done_workshop_path(:step_id => step.id), method: :post, class: "button-minimal-thicker timeline-button",  id: "done_#{step.id}" %>
     </div>
 
     </div>
-    <hr>
     <% counter += 1 %>
+    <hr>
     <% end %>
   </div>
     </div>
-
 </div>
   </div>
 
@@ -118,7 +115,7 @@
 
   <div class="community-cards center">
 
-    <% @workshop.posts.reverse.first(6).each do |post|%>
+    <% @workshop.posts.limit(6).each do |post|%>
       <% if post.photo.attached? %>
         <% background_url = cl_image_path post.photo.key, width: 300, height: 400, crop: :fill %>
       <% else %>
