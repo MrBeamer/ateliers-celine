@@ -20,7 +20,17 @@ function buttonDone() {
   buttons.forEach( (button, index) => {
     button.addEventListener("click", (event) => {
     const bar = document.querySelector(".progress-bar");
-    bar.classList.toggle(`progress-bar_${index+1}`);
+    bar.classList = window.localStorage.toggled;
+
+    if (window.localStorage.toggled != "progress-bar" ) {
+      bar.classList.toggle(`progress-bar_${index+1}`, true );
+      window.localStorage.toggled = `progress-bar_${index+1}`;
+   } else {
+      bar.classList.toggle(`progress-bar_${index+1}`, false );
+      window.localStorage.toggled = "";
+   }
+
+   
     button.classList.toggle("button-minimal-thicker-pink")
     if (button.innerHTML === "Reset Progress") {
       button.innerHTML = "Step completed";
