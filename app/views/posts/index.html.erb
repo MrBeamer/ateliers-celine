@@ -1,0 +1,27 @@
+
+<div id="community-section" class="banner-blue">
+  <div>
+    <h1>All the Work from the Community of <br> #WeAreCéline</h1>
+    <img class="blue-line" src="https://res.cloudinary.com/dxdboxbyb/image/upload/v1606232604/atelier-celine/Landing%20Page/cluepznhimc95jwz0ono.png" alt="">
+  </div>
+
+  <div class="community-cards center">
+
+    <% @posts.each do |post|%>
+      <% if post.photo.attached? %>
+        <% background_url = cl_image_path post.photo.key, width: 300, height: 400, crop: :fill %>
+      <% else %>
+        <% background_url = 'https://i.redd.it/d5g2jaawgw431.jpg'%>
+      <% end %>
+
+
+      <div class="community-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= background_url %>')">
+        <%= post.title %>
+        <%= post.user.username %>
+      </div>
+    <% end %>
+
+  </div>
+
+
+</div>
