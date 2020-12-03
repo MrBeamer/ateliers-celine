@@ -75,13 +75,16 @@
 
 <div class="center mid">
     <% counter = 1 %>
-    <div class="workshop-discription">
+    <div>
+          <div class="workshop-discription">
     <div class="workshop-content-left">
        <div>
     <% @workshop.steps.each do |step| %>
     <div class="instruction-single-box">
-    <div class="instructions-title" data-step= "<%=step.id%>" id="step-<%=step.id%>" > 
+    <div class="instructions-title" data-step= "<%=step.id%>" id="step-<%=step.id%>" >
       <h4> <%= counter %>. <%= step.title %> </h4>
+    </div>
+
     </div>
 
 

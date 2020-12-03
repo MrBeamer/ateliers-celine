@@ -124,7 +124,7 @@
   <div class="community-cards center">
 
 
-    
+
     <% @workshop.posts.reverse.first(6).each do |post|%>
       <% if post.photo.attached? %>
         <% background_url = cl_image_path post.photo.key, width: 300, height: 400, crop: :fill %>
@@ -195,6 +195,7 @@
   </div>
 </div>
 </div>
+
 
 
 

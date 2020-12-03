@@ -1,7 +1,13 @@
-<div class="d-flex justify-content-around">
-  <div class="width-form">
+<div class="form-box">
+    <div class="form-image">
+        <img src="https://images.unsplash.com/photo-1552084117-56a987666449?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80">
+  </div>
+<div class="form-stuff">
+ <div class="form-text">
 
-    <h2>Sign up</h2>
+    <h1 id="form-headline">Sign up</h1>
+
+
 
     <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= f.error_notification %>
@@ -62,10 +68,13 @@
       </div>
 
       <div class="form-actions">
-        <%= f.button :submit, "Sign up", class: "button-pink-devise" %>
+        <%= f.button :submit, "Sign up", class: "button-form-all" %>
       </div>
     <% end %>
 
-
   </div>
 </div>
+
+</div>
+
+

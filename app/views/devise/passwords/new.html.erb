@@ -1,8 +1,12 @@
-<div class="container">
+<div class="form-box">
+    <div class="form-image">
+        <img src="https://images.unsplash.com/photo-1523554888454-84137e72c3ce?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80">
+  </div>
+<div class="form-stuff">
+ <div class="form-text">
 
-<h2>Forgot your password?</h2>
-
-<%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+    <h1 id="form-headline">Forgot your password?</h1>
+ <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
@@ -13,8 +17,11 @@
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Send me reset password instructions", class: "button-pink-devise reset-width" %>
+    <%= f.button :submit, "Send me reset password instructions", class: "button-form-all" %>
   </div>
 <% end %>
+
+  </div>
+</div>
 
 </div>
