@@ -10,25 +10,6 @@
   margin-left: 50px;
 }
 
-
-
-.ball {
-  background-color: violet;
-  border-radius: 50%;
-  padding: 40px;
-  height: 50px;
-  width: 50px;
-} 
-
-.ball-done {
-  background-color: red;
-  border-radius: 50%;
-  padding: 40px;
-  height: 50px;
-  width: 50px;
-}
-
-
 //banner
 
 .instructions-banner {
@@ -202,7 +183,6 @@ margin-bottom: 50px;
 margin-top: 50px;
 }
 
-
 // Social section
 
 .button-social{
@@ -212,16 +192,22 @@ margin-top: 50px;
   color: white;
   font-weight: bolder;
   background: #C41A49;
-  margin-top: 50px;
+  margin-top: 40px;
   width: 50% ;
   text-align: center;
   margin-left: 360px;
 }
+
 .button-social:hover {
   text-decoration: none;
   color: #C41A49;
   background: white;
 }
+
+ .move-up {
+  margin-bottom: 90px;
+ }
+
 
 
 

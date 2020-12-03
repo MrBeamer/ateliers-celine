@@ -195,9 +195,11 @@ text-align: center;
 
 .banner-blue {
   background-color: #455CC7;
-  height: 640px;
+  min-height: 650px;
   display: flex;
   flex-direction: column;
+  overflow:hidden;
+  padding-bottom: 40px;
 }
 
 .banner-blue h1 {

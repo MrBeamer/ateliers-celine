@@ -14,7 +14,8 @@ class PostsController < ApplicationController
     @post.user = current_user
     @post.workshop = @workshop
     if @post.save
-      redirect_to workshop_path(@workshop, anchor: "posts_all")
+      # redirect_to workshop_path(@workshop, anchor: "posts_all")
+      redirect_to posts_path(anchor: "posts_all")
     else
       render :new
     end
