@@ -89,16 +89,17 @@
 
   <div class="move-videos-right">
     <div class="instructions-description">
-    <%= step.description %>
+    <p><%= step.description %></p>
+     <div class="progress-button">
+      <%= link_to "Step completed", mark_as_done_workshop_path(:step_id => step.id), method: :post, class: "button-minimal-thicker timeline-button", data: {step: "#{step.id}"} %>
+    </div>
+
     </div>
     <div class="instruction-video">
       <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= step.youtube_url %>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
   </div>
-    <div class="progress-button">
-      <%= link_to "Step completed", mark_as_done_workshop_path(:step_id => step.id), method: :post, class: "button-minimal-thicker timeline-button", data: {step: "#{step.id}"} %>
-    </div>
-
+   
     </div>
     <% counter += 1 %>
     <hr>
