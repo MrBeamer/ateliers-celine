@@ -165,11 +165,18 @@ margin-bottom: 50px;
 
 .instruction-single-box {
   height: 322 px;
-  padding-bottom: 50px;
+  padding: 40px;
+  padding-top: 20px;
+  padding-left: 60px;
+  padding-bottom: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 5px;
 }
 
 .instructions-description {
   margin-top: 50px;
+  width: 50%;
+  margin-right: 70px;
 }
 
 .progress-button {
@@ -181,6 +188,10 @@ margin-bottom: 50px;
 .instruction-video {
 margin-bottom: 50px;
 margin-top: 50px;
+background-color: #C41A49;
+padding: 10px;
+padding-bottom: 4px;
+border-radius: 5px;
 }
 
 // Social section
@@ -208,6 +219,9 @@ margin-top: 50px;
   margin-bottom: 90px;
  }
 
+ .move-videos-right {
+   display: flex;
+ }
 
 
 
