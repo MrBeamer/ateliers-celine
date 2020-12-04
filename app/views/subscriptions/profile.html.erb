@@ -59,6 +59,7 @@
                     <p><%= workshop.artist_name %></p>
                     <p style="font-size: 15px; color: #455CC7; font-weight: bold;"><%= workshop.category.upcase %></p>
                     <p> <%= link_to "Instructions", instructions_workshop_path(workshop), class: "button-minimal-thicker" %></p>
+                    <p> <%= link_to "Leave a Review", new_workshop_review_path(workshop), class: "button-minimal-thicker-subscription" %></p>
               </div>
             <% end %>
 

@@ -70,6 +70,21 @@
   background: #C41A49;
 }
 
+.button-minimal-thicker-subscription {
+  border: 2px solid #C41A49;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 2px 107px;
+  color: #C41A49;
+  font-weight: bolder;
+  background: white;
+}
+.button-minimal-thicker-subscription:hover {
+  text-decoration: none;
+  color: white;
+  background: #C41A49;
+}
+
 // login and sign up
 .button-pink-devise {
   background-color: #C41A49;
