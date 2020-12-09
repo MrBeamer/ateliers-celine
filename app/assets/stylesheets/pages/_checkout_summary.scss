@@ -12,7 +12,6 @@
 
 .order-image {
   width: 60px;
-  // border-radius: 5px;
   border-radius: 50px;
   height:60px;
   border: 1px solid #C41A49;
@@ -21,8 +20,8 @@
 }
 
 .mid {
-display:flex;
-justify-content: center;
+  display:flex;
+  justify-content: center;
 }
 
 .order-box{
@@ -43,11 +42,11 @@ justify-content: center;
 }
 
 .workshop-address p {
-margin-top: 20px;
+  margin-top: 20px;
 }
 
 .payment-background {
-background-color: #CCD2E9;
+  background-color: #CCD2E9;
 }
 
 .payment-background h4 {

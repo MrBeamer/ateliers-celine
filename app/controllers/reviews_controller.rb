@@ -1,5 +1,4 @@
 class ReviewsController < ApplicationController
-  
   def new
     @review = Review.new
     @workshop = Workshop.find(params[:workshop_id])

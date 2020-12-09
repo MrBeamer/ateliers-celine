@@ -1,6 +1,6 @@
 function selectCardThree() {
   const button = document.getElementById("subscription-card-three")
-  
+
   if (button) {
     button.addEventListener("click", pinkCardThree);
     function pinkCardThree() {
@@ -10,8 +10,6 @@ function selectCardThree() {
       one_card.className = "subscription-card"
     }
   }
-
 }
-
 
 export { selectCardThree }

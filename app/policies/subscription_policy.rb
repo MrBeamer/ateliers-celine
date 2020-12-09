@@ -20,5 +20,4 @@ class SubscriptionPolicy < ApplicationPolicy
   def profile?
     return true
   end
-  
 end

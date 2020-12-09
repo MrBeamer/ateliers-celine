@@ -1,80 +1,71 @@
 <div class="form-box">
-    <div class="form-image">
-        <img src="https://images.unsplash.com/photo-1552084117-56a987666449?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80">
+  <div class="form-image">
+    <img src="https://images.unsplash.com/photo-1552084117-56a987666449?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80">
   </div>
-<div class="form-stuff">
- <div class="form-text">
-
-    <h1 id="form-headline">Sign up</h1>
-
-
-
-    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <div class="form-stuff">
+    <div class="form-text">
+      <h1 id="form-headline">Sign up</h1>
+      <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= f.error_notification %>
+        <div class="form-inputs">
+          <%= f.input :username,
+                      required: true,
+                      autofocus: true,
+                      input_html: { autocomplete: "username" }%>
+          <%= f.input :first_name,
+                      required: true,
+                      autofocus: true,
+                      input_html: { autocomplete: "first_name" }%>
 
-      <div class="form-inputs">
-        <%= f.input :username,
-                    required: true,
-                    autofocus: true,
-                    input_html: { autocomplete: "username" }%>
-        <%= f.input :first_name,
-                    required: true,
-                    autofocus: true,
-                    input_html: { autocomplete: "first_name" }%>
+          <%= f.input :last_name,
+                      required: true,
+                      autofocus: true,
+                      input_html: { autocomplete: "last_name" }%>
 
-        <%= f.input :last_name,
-                    required: true,
-                    autofocus: true,
-                    input_html: { autocomplete: "last_name" }%>
+          <%= f.input :street,
+                      required: true,
+                      autofocus: true,
+                      input_html: { autocomplete: "street" }%>
 
-        <%= f.input :street,
-                    required: true,
-                    autofocus: true,
-                    input_html: { autocomplete: "street" }%>
+          <%= f.input :postcode,
+                      required: true,
+                      autofocus: true,
+                      input_html: { autocomplete: "postcode" }%>
 
-        <%= f.input :postcode,
-                    required: true,
-                    autofocus: true,
-                    input_html: { autocomplete: "postcode" }%>
+          <%= f.input :state,
+                      required: true,
+                      autofocus: true,
+                      input_html: { autocomplete: "state" }%>
 
-        <%= f.input :state,
-                    required: true,
-                    autofocus: true,
-                    input_html: { autocomplete: "state" }%>
+          <%= f.input :city,
+                      required: true,
+                      autofocus: true,
+                      input_html: { autocomplete: "city" }%>
+          <%= f.input :phone,
+                      required: true,
+                      autofocus: true,
+                      input_html: { autocomplete: "phone" }%>
 
-        <%= f.input :city,
-                    required: true,
-                    autofocus: true,
-                    input_html: { autocomplete: "city" }%>
-        <%= f.input :phone,
-                    required: true,
-                    autofocus: true,
-                    input_html: { autocomplete: "phone" }%>
+            <%= f.input :email,
+                      required: true,
+                      autofocus: true,
+                      input_html: { autocomplete: "email" }%>
 
-          <%= f.input :email,
-                    required: true,
-                    autofocus: true,
-                    input_html: { autocomplete: "email" }%>
-
-        <%= f.input :password,
-                    required: true,
-                    hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                    input_html: { autocomplete: "new-password" } %>
-        <%= f.input :password_confirmation,
-                    required: true,
-                    input_html: { autocomplete: "new-password" } %>
-        <%= f.input :photo, as: :file %>
-
-      </div>
-
+          <%= f.input :password,
+                      required: true,
+                      hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                      input_html: { autocomplete: "new-password" } %>
+          <%= f.input :password_confirmation,
+                      required: true,
+                      input_html: { autocomplete: "new-password" } %>
+          <%= f.input :photo, as: :file %>
+        </div>
       <div class="form-actions">
         <%= f.button :submit, "Sign up", class: "button-form-all" %>
       </div>
-    <% end %>
-
+      <% end %>
+    </div>
   </div>
-</div>
-
 </div>
 
 

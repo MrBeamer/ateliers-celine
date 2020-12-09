@@ -1,5 +1,4 @@
 class PostsController < ApplicationController
-
   def new
     @post = Post.new
     @workshop = Workshop.find(params[:workshop_id])

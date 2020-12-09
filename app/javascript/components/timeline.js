@@ -1,8 +1,8 @@
 // function buttonDone() {
 
-  
+
 //   const buttons = document.querySelectorAll(".timeline-button");
- 
+
 //   buttons.forEach( (button, index) => {
 //     button.addEventListener("click", (event) => {
 //     const ball = document.querySelector(`#ball_${index+1}`);
@@ -10,13 +10,13 @@
 //   })
 
 //   });
-// } 
+// }
 
 function buttonDone() {
 
-  
+
   const buttons = document.querySelectorAll(".timeline-button");
- 
+
   buttons.forEach( (button, index) => {
     button.addEventListener("click", (event) => {
     const bar = document.querySelector(".progress-bar");
@@ -30,13 +30,13 @@ function buttonDone() {
   })
 
   });
-} 
+}
 
 function anchorFunction() {
 
-  
+
   const buttons = document.querySelectorAll(".timeline-button");
- 
+
   buttons.forEach( (button, index) => {
     button.addEventListener("click", (event) => {
       const step = document.querySelector(`#step`)
@@ -45,10 +45,7 @@ function anchorFunction() {
   )
 
   });
-} 
-
-
-
+}
 
 export { buttonDone }
 export { anchorFunction }

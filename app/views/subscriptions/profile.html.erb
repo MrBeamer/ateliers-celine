@@ -1,11 +1,10 @@
-
 <div id="profile-banner">
   <div class="container-profile">
     <h1> My Profile </h1>
     <br>
-    <div class="rectangle"> </div>
+    <div class="rectangle">
+    </div>
     <div id="profile">
-
       <div id="profile-picture">
         <% if current_user.photo.attached? %>
           <%= cl_image_tag current_user.photo.key %>
@@ -13,9 +12,6 @@
           <%= image_tag "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" %>
         <% end %>
       </div>
-    
-
-
       <div id="profile-description">
         <h5> <%= @user.username %></h5>
         <div id="profile-address">
@@ -23,10 +19,7 @@
           <i class="fas fa-envelope"> </i> <%= @user.email %> <br>
           <i class="fas fa-map-marker-alt"></i> <%= @user.street %>, <%= @user.postcode %> <%= @user.city %>
         </div>
-  
-
         <br>
-
         <% if @user.bio == "" || @user.bio==nil %>
           <p>Nothing here yet. Please update your bio.</p>
         <% else %>
@@ -38,38 +31,34 @@
   </div>
 </div>
 
-
-
-
 <div class="container">
   <h1> My Ateliers</h1>
-    <br>
-    <div class="rectangle"> </div>
-
-    <div class="my-workshops">
-      <div class="center-profile">
-        <div class="index-cards">
-          <% if @workshops.nil? == false %>
-            <% @workshops.each do |workshop| %>
-            <% background_url = cl_image_path workshop.photo.key, width: 300, height: 400, crop: :fill %>
-              <div class="test">
-                <div class="index-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= background_url %>')"></div>
-                    <p> <strong><%= workshop.name %> </strong> </p>
-                    <p> <%= @usersteps_done.length %>/<%= @usersteps.length %> steps completed </p>
-                    <p><%= workshop.artist_name %></p>
-                    <p style="font-size: 15px; color: #455CC7; font-weight: bold;"><%= workshop.category.upcase %></p>
-                    <p> <%= link_to "Instructions", instructions_workshop_path(workshop), class: "button-minimal-thicker" %></p>
-                    <p> <%= link_to "Leave a Review", new_workshop_review_path(workshop), class: "button-minimal-thicker-subscription" %></p>
+  <br>
+  <div class="rectangle">
+  </div>
+  <div class="my-workshops">
+    <div class="center-profile">
+      <div class="index-cards">
+        <% if @workshops.nil? == false %>
+          <% @workshops.each do |workshop| %>
+          <% background_url = cl_image_path workshop.photo.key, width: 300, height: 400, crop: :fill %>
+            <div class="test">
+              <div class="index-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= background_url %>')">
               </div>
-            <% end %>
-
-            <% else %>
-              <p> You don't have any Ateliers yet. </p>
-            <% end %>
-        </div>
+              <p> <strong><%= workshop.name %> </strong> </p>
+              <p> <%= @usersteps_done.length %>/<%= @usersteps.length %> steps completed </p>
+              <p><%= workshop.artist_name %></p>
+              <p style="font-size: 15px; color: #455CC7; font-weight: bold;"><%= workshop.category.upcase %></p>
+              <p> <%= link_to "Instructions", instructions_workshop_path(workshop), class: "button-minimal-thicker" %></p>
+              <p> <%= link_to "Leave a Review", new_workshop_review_path(workshop), class: "button-minimal-thicker-subscription" %></p>
+            </div>
+          <% end %>
+          <% else %>
+            <p> You don't have any Ateliers yet. </p>
+        <% end %>
       </div>
     </div>
-
+  </div>
 </div>
 
 

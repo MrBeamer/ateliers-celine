@@ -3,7 +3,6 @@
   background-size: cover;
   background-position: center;
   flex-direction: column;
-  // padding: 200px 0;
   height: 100vh ;
   display: flex;
   align-items: center;
@@ -21,10 +20,10 @@
 
 //video
 .overlay h1{
-text-align:center;
-color: #FFFFFF;
-font-size: 50px;
-margin-bottom: 23px;
+  text-align:center;
+  color: #FFFFFF;
+  font-size: 50px;
+  margin-bottom: 23px;
 }
 
 
@@ -34,7 +33,6 @@ video {
   height: 100vh;
   top: 0;
   left: 0;
-
 }
 
 .video-box\ { position:relative; }
@@ -52,7 +50,6 @@ video {
 
 .gradient {
   height: 100vh ;
-  // height: 600px;
   position:absolute;
   top: 90px;
   left: 0px;
@@ -62,28 +59,23 @@ video {
 }
 
 
-//bewlo video
-
-#finger-print-box{
-
-}
-
+//below video
 
 #landing-image-kit {
-height: 640px;
-margin-left: 30px;
+  height: 640px;
+  margin-left: 30px;
 }
 
 #landing-image-print {
-height: 580px;
-margin-top: 50px;
-margin-bottom: 90px;
-margin-left: 250px;
+  height: 580px;
+  margin-top: 50px;
+  margin-bottom: 90px;
+  margin-left: 250px;
 }
 
 
-.landing-page-text{
-font-size: 24px;
+.landing-page-text {
+  font-size: 24px;
 }
 
 
@@ -93,8 +85,6 @@ font-size: 24px;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
   margin-bottom: 90px;
-  // position: relative;
-  // z-index: 20;
 }
 
 // Smallest device
@@ -150,7 +140,7 @@ font-size: 24px;
 
 
 .home-card p {
-margin-left: 20px;
+  margin-left: 20px;
 }
 
 .fa-heart {
@@ -218,12 +208,10 @@ margin-left: 20px;
 }
 
 
-
 .button-bottom-home {
   margin-bottom: 90px;
 }
 
 .bigger {
   padding: 12px 240px;
-
 }

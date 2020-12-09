@@ -1,11 +1,6 @@
 //addded
-
 .selector-cards {
   margin-left: 50px;
-  //   display: flex;
-  // justify-content: space-between;
-  // flex-wrap: wrap;
-  // dsssds
 }
 
 .button-blue {
@@ -24,14 +19,11 @@
   margin-left: 30px;
   display: inline-block;
   padding: 0;
-  // flex: 0 0 30%;
 }
 
 .tag-selector {
-  // position: absolute;
   transform: scale(0);
 }
-
 
 .tag-selector + label {
   background-color: white;
@@ -47,14 +39,14 @@
 }
 
 .tag-selector + label h4{
-font-size: 15px;
-color: #455CC7;
-font-weight: bold;
-text-align: center;
-margin-bottom: 15px;
+  font-size: 15px;
+  color: #455CC7;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 15px;
 }
 
-.tag-selector + label p{
+.tag-selector + label p {
  font-size: 1em;
  text-align: center;
  margin: 15px 0;
@@ -70,8 +62,7 @@ margin-bottom: 15px;
 
 
 //button
-
-.button-selector{
+.button-selector {
   border: 2px solid #C41A49;
   box-sizing: border-box;
   border-radius: 5px;
@@ -84,6 +75,7 @@ margin-bottom: 15px;
   text-align: center;
   width: 80%;
 }
+
 .button-selector:hover {
   text-decoration: none;
   color: #C41A49;

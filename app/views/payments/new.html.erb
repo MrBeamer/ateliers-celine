@@ -1,72 +1,54 @@
 <div class="payment-background">
-
-<div class="center mid">
+  <div class="center mid">
     <div class="workshop-discription">
-    <div class="workshop-content-left">
-      <h4>Your Address</h4>
-      <img class="red-line" src="https://res.cloudinary.com/dxdboxbyb/image/upload/v1606232604/atelier-celine/Landing%20Page/lqztsqrpdeth0ncdjkk6.png" alt="">
-      <div class="workshop-address">
-      <p> <strong>First name:</strong> <%= @user.first_name %> </p>
-      <p> <strong>Last name:</strong> <%= @user.last_name %> </p>
-      <p> <strong>Country:</strong> <%= @user.country %> </p>
-      <p> <strong>Address:</strong> <%= @user.street %> </p>
-      <p> <strong>State:</strong> <%= @user.state %> </p>
-      <p> <strong>Postcode:</strong> <%= @user.postcode %> </p>
+      <div class="workshop-content-left">
+        <h4>Your Address</h4>
+        <img class="red-line" src="https://res.cloudinary.com/dxdboxbyb/image/upload/v1606232604/atelier-celine/Landing%20Page/lqztsqrpdeth0ncdjkk6.png" alt="">
+        <div class="workshop-address">
+          <p> <strong>First name:</strong> <%= @user.first_name %> </p>
+          <p> <strong>Last name:</strong> <%= @user.last_name %> </p>
+          <p> <strong>Country:</strong> <%= @user.country %> </p>
+          <p> <strong>Address:</strong> <%= @user.street %> </p>
+          <p> <strong>State:</strong> <%= @user.state %> </p>
+          <p> <strong>Postcode:</strong> <%= @user.postcode %> </p>
+        </div>
+        <div class="button-adress-change-box">
+          <%= link_to "Edit Address", edit_user_registration_path, class: "button-adress-change" %>
+        </div>
       </div>
-      <div class="button-adress-change-box">
-        <%= link_to "Edit Address", edit_user_registration_path, class: "button-adress-change" %>
-      </div>
-    </div>
-    <div class="center">
-  <div class="order-box">
-    <div class="workshop-content-left">
-      <h4>Your Order</h4>
-      <img class="red-line" src="https://res.cloudinary.com/dxdboxbyb/image/upload/v1606232604/atelier-celine/Landing%20Page/lqztsqrpdeth0ncdjkk6.png" alt="">
-      <div class="workshop-order">
-        <p><%= @order.subscription.sku %></strong> for <strong><%= humanized_money_with_symbol @order.amount %></strong></p>
-        <p><strong>Included workshops:</strong></p>
-        <% @order.subscription.workshops.each do |workshop| %>
-      <div>
-        <%= cl_image_tag(workshop.photo.key, width: 400, height: 600, class: "order-image")%>
-        <%= workshop.artist_name %> - <%= workshop.name %>
-      </div>
-        <% end %>
-      </div>
-
+      <div class="center">
+        <div class="order-box">
+          <div class="workshop-content-left">
+            <h4>Your Order</h4>
+            <img class="red-line" src="https://res.cloudinary.com/dxdboxbyb/image/upload/v1606232604/atelier-celine/Landing%20Page/lqztsqrpdeth0ncdjkk6.png" alt="">
+            <div class="workshop-order">
+              <p><%= @order.subscription.sku %></strong> for <strong><%= humanized_money_with_symbol @order.amount %></strong></p>
+              <p><strong>Included workshops:</strong></p>
+              <% @order.subscription.workshops.each do |workshop| %>
+              <div>
+              <%= cl_image_tag(workshop.photo.key, width: 400, height: 600, class: "order-image")%>
+              <%= workshop.artist_name %> - <%= workshop.name %>
+              </div>
+              <% end %>
+            </div>
             <div class="order-box">
-    <div class="workshop-content-left">
-      <button id="pay" class="button-payment">Confirm Checkout</button>
-      <script src="https://js.stripe.com/v3/"></script>
-      <script>
-        const paymentButton = document.getElementById('pay');
-        paymentButton.addEventListener('click', () => {
-          const stripe = Stripe('<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>');
-          stripe.redirectToCheckout({
-            sessionId: '<%= @order.checkout_session_id %>'
-          });
-        });
-      </script>
+              <div class="workshop-content-left">
+                <button id="pay" class="button-payment">Confirm Checkout</button>
+                <script src="https://js.stripe.com/v3/"></script>
+                <script>
+                  const paymentButton = document.getElementById('pay');
+                  paymentButton.addEventListener('click', () => {
+                    const stripe = Stripe('<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>');
+                    stripe.redirectToCheckout({
+                     sessionId: '<%= @order.checkout_session_id %>'
+                    });
+                  });
+                </script>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-
-    </div>
-  </div>
 </div>
-  </div>
-
-</div>
-
-
-
-
-
-
-</div>
-
-
-
-
-
-
-
-

@@ -1,5 +1,5 @@
 class OrdersController < ApplicationController
-before_action :skip_authorization
+  before_action :skip_authorization
 
   def new
     subscription = Subscription.find(params[:subscription_id])

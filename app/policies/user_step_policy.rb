@@ -8,5 +8,4 @@ class UserStepPolicy < ApplicationPolicy
   def mark_as_done?
     return true
   end
-  
 end
