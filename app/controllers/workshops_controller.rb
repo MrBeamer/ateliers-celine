@@ -29,8 +29,7 @@ class WorkshopsController < ApplicationController
     authorize @step
   end
 
-  
-  private 
+  private
 
   def workshop_content_params
     params.require(:workshop).permit(:workshop_content, :pdf)

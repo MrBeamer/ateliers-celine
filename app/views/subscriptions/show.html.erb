@@ -1,26 +1,16 @@
-
 <div class="center">
-    <div class="center-child">
-  <div class="workshop-discription">
-    <div class="workshop-content-left">
-      <h4>Almost there!</h4>
-      <img class="red-line" src="https://res.cloudinary.com/dxdboxbyb/image/upload/v1606232604/atelier-celine/Landing%20Page/cluepznhimc95jwz0ono.png" alt="">
-      <% @subscription.workshops %>
-      <p>Awesome things are lying ahead of us</p>
-      
-      <%= form_tag orders_path do %>
-      <%= hidden_field_tag 'subscription_id', @subscription.id %>
-      <%= submit_tag 'Checkout', class: 'button-pink' %>
-      <% end %>
-
+  <div class="center-child">
+    <div class="workshop-discription">
+      <div class="workshop-content-left">
+        <h4>Almost there!</h4>
+        <img class="red-line" src="https://res.cloudinary.com/dxdboxbyb/image/upload/v1606232604/atelier-celine/Landing%20Page/cluepznhimc95jwz0ono.png" alt="">
+        <% @subscription.workshops %>
+        <p>Awesome things are lying ahead of us</p>
+        <%= form_tag orders_path do %>
+        <%= hidden_field_tag 'subscription_id', @subscription.id %>
+        <%= submit_tag 'Checkout', class: 'button-pink' %>
+        <% end %>
+      </div>
     </div>
   </div>
-
 </div>
-</div>
-
-
-
-
-
-

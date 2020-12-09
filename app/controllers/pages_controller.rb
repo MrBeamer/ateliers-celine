@@ -2,7 +2,6 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :home, :faq, :terms_and_conditions ]
 
   def home
-    
   end
 
   def faqs

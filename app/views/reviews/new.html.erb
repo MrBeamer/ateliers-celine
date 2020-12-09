@@ -1,17 +1,15 @@
-
 <div class="form-box">
-    <div class="form-image">
-        <img src="https://www.wiregrassmuseum.org/wp-content/uploads/2017/10/Scott-Stephens-Riverbend-scaled.jpg">
+  <div class="form-image">
+    <img src="https://www.wiregrassmuseum.org/wp-content/uploads/2017/10/Scott-Stephens-Riverbend-scaled.jpg">
   </div>
-<div class="form-stuff">
- <div class="form-text">
-    <h1 id="form-headline">Leave a review for the Workshop <%= @workshop.name %> </h1>
-  <%= simple_form_for [@workshop, @review] do |f| %>
-    <%= f.input :rating %>
-    <%= f.input :comment %>
-    <%= f.submit "Leave a review", class: "button-form-all" %>
-  <% end %>
+  <div class="form-stuff">
+    <div class="form-text">
+      <h1 id="form-headline">Leave a review for the Workshop <%= @workshop.name %> </h1>
+      <%= simple_form_for [@workshop, @review] do |f| %>
+        <%= f.input :rating %>
+        <%= f.input :comment %>
+        <%= f.submit "Leave a review", class: "button-form-all" %>
+      <% end %>
+    </div>
   </div>
-</div>
-
 </div>

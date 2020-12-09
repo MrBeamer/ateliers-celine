@@ -1,9 +1,8 @@
-
 <div id="workshop-index-banner">
   <div>
     <img src="https://res.cloudinary.com/yileijiang/image/upload/v1606228589/ateliers%20celine/workshop_index_zuibmj.jpg" alt="BEA BONAFINI">
   </div>
-    <div id="workshop-index-yellow-shape">
+  <div id="workshop-index-yellow-shape">
   </div>
   <div id="workshop-index-title">
     <h1>
@@ -23,8 +22,8 @@
 <div class="container">
   <h1>Choose Your Atelier</h1>
   <br>
-  <div class="rectangle"> </div>
-
+  <div class="rectangle">
+  </div>
   <h4>Categories:</h4>
   <div id="workshop-index-categories">
     <div class="workshop-index-category">
@@ -49,18 +48,15 @@
 <div class="center">
   <div class="index-cards">
     <% @workshops.each do |workshop| %>
-     <% background_url = cl_image_path workshop.photo.key, width: 300, height: 400, crop: :fill %>
-      <div class="test">
-        <div class="index-card" style="background-image: url('<%= background_url %>')">
+      <% background_url = cl_image_path workshop.photo.key, width: 300, height: 400, crop: :fill %>
+        <div class="test">
+          <div class="index-card" style="background-image: url('<%= background_url %>')">
           </div>
-            <p> <strong><%= workshop.name %></strong> </p>
-            <p><%= workshop.artist_name %></p>
-            <p style="font-size: 15px; color: #455CC7; font-weight: bold;"><%= workshop.category.upcase %></p>
-            <%= link_to "Discover", workshop_path(workshop), class: "button-minimal-thicker" %>
-      </div>
+          <p> <strong><%= workshop.name %></strong> </p>
+          <p><%= workshop.artist_name %></p>
+          <p style="font-size: 15px; color: #455CC7; font-weight: bold;"><%= workshop.category.upcase %></p>
+          <%= link_to "Discover", workshop_path(workshop), class: "button-minimal-thicker" %>
+        </div>
     <% end %>
   </div>
 </div>
-
-<!--  linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
- -->

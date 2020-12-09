@@ -1,5 +1,4 @@
 class SubscriptionsController < ApplicationController
-
   def index
     @subscriptions = policy_scope(Subscription).order(created_at: :desc)
     @workshops = policy_scope(Workshop).order(created_at: :desc)
@@ -32,12 +31,12 @@ class SubscriptionsController < ApplicationController
       @subscription.sku = "Three Month Plan"
 
       @subscription.workshops.each do |workshop|
-      workshop.steps.each do |step|
-        user_step = UserStep.new
-        user_step.user = current_user
-        user_step.step = step
-        user_step.done = false
-        user_step.save
+        workshop.steps.each do |step|
+          user_step = UserStep.new
+          user_step.user = current_user
+          user_step.step = step
+          user_step.done = false
+          user_step.save
         end
       end
 
@@ -57,16 +56,9 @@ class SubscriptionsController < ApplicationController
         user_step.save
       end
     end
-
     @subscription.save
-
-
-
     redirect_to new_subscription_order_path(@subscription)
-
   end
-
- 
 
   def profile
     @user = current_user
@@ -79,11 +71,8 @@ class SubscriptionsController < ApplicationController
         @usersteps_done << userstep
       end
     end
-
     authorize @subscription
-
     @workshops = @user.subscriptions[0].workshops if !@user.subscriptions.empty?
-    
   end
 
   private
@@ -91,6 +80,4 @@ class SubscriptionsController < ApplicationController
   def subscription_params
     params.require(:subscription).permit(:start_date, :end_date, :duration, :price, :name, :sku, workshop_ids: [])
   end
-
-
 end

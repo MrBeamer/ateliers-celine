@@ -12,10 +12,8 @@ class User < ApplicationRecord
   has_many :steps, through: :user_steps
   has_many :posts
   has_many :reviews
-
-  #validates :username, :first_name, :last_name, :country, :city, :state, :postcode, :street, presence: true
-  #validates :username, uniqueness: true
-  #validates_format_of :country, :city, :state, with: /\D+/i
+  # validates :username, :first_name, :last_name, :country, :city, :state, :postcode, :street, presence: true
+  # validates :username, uniqueness: true
+  # validates_format_of :country, :city, :state, with: /\D+/i
   # TODO: validation of phone number with regex. Look up in excercise @Michael
-
 end

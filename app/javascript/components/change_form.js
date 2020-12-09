@@ -1,4 +1,3 @@
-
 function change_form(){
   const button_1 = document.querySelector("#one_month");
   const button_3 = document.querySelector("#three_months");
@@ -9,7 +8,7 @@ function change_form(){
       fieldset.classList.remove("check_boxes");
       fieldset.classList.add("radio_buttons");
       fieldset.firstChild.name = "subscription[workshop_ids]";
-    
+
       document.querySelectorAll(".tag-selector").forEach((element) => {
         const label = element.nextElementSibling;
         label.classList.remove("collection_check_boxes");
@@ -29,7 +28,7 @@ function change_form(){
       fieldset.classList.remove("radio_buttons");
       fieldset.classList.add("check_boxes");
       fieldset.firstChild.name = "subscription[workshop_ids][]";
-    
+
       document.querySelectorAll(".tag-selector").forEach((element) => {
         const label = element.nextElementSibling;
         label.classList.remove("collection_radio_buttons");
@@ -41,7 +40,7 @@ function change_form(){
       })
     });
   }
-  
+
 };
 
 export { change_form }
