@@ -11,7 +11,4 @@ class DashboardPolicy < ApplicationPolicy
     @user = user
     @record = record
   end
-
-  
-
 end
