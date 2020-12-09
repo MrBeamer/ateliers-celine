@@ -1,10 +1,8 @@
 .footer {
   background: #DAB300 !important;
   display: flex;
-  // align-items: center;
   justify-content: space-between;
   height: 180px;
-  // padding: 0px 50px;
   color: rgba(0,0,0,0.3);
 }
 
@@ -17,15 +15,12 @@
 .infos a{
   color:white;
   padding: 0 0;
-
 }
 
 .infos a:hover{
   opacity: 0.5;
   text-decoration: none;
-
 }
-
 
 .footer-links a {
   color: #FFFFFF;
@@ -33,20 +28,18 @@
   font-size: 40px;
   padding: 0px 10px;
 }
+
 .footer-links a:hover {
   opacity: 0.5;
 }
 
 .footer-image-right {
   height: 180px;
-
 }
 
 .footer-image-left {
   height: 180px;
-
 }
-
 
 .infos {
   margin-top: 30px;
@@ -59,7 +52,3 @@
   list-style-type: none;
   color: white;
 }
-
-
-
-
