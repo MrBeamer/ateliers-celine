@@ -8,6 +8,12 @@ Ateliers Céline is a monthly Do It Yourself experience for people who love to m
 
 ---
 
+## Live Preview
+
+http://www.ateliersoftalents.com/
+
+---
+
 ## Technologies
 
 Project is created with:
@@ -27,9 +33,3 @@ Project is created with:
 - **Cloudinary** for image uploads
 - **Yarn** as package manager
 - **Simple Form** for user input
-
----
-
-## Live Preview
-
-http://www.ateliersoftalents.com/
