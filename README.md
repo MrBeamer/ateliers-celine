@@ -23,8 +23,8 @@ Project is created with:
 
 - **PG** postgresql as the database for Active Record
 - **Puma** for the app server
-- **Sass-Rails** Use SCSS for stylesheets
-- **Bootstrap** for styling
+- **Sass-Rails** to use SCSS for stylesheets
+- **Bootstrap** for styling and positioning
 - **Stripe** for payment integration
 - **Money-rails** for currency converter
 - **Webpack** as JavaScript module bundler
