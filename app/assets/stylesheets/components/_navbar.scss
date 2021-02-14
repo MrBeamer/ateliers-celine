@@ -22,11 +22,10 @@
 }
 
 .nav-own {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 24px;
   font-weight: 700;
 }
-
 
 .nav-img {
   height: auto;
@@ -38,27 +37,40 @@
   margin-right: 0;
 }
 
-.nav-link{
-  color: black!important;
+.nav-link {
+  color: black !important;
 }
 
 .word-logo {
   height: 35px;
-  margin-right: 70px;
 }
 
 .pad {
-  padding-right: 140px !important;
+  justify-content: space-between;
+  // padding-right: 140px !important;
 }
 
 .nav-link:hover {
-  color: #C41A49 !important;
+  color: #c41a49 !important;
 }
 
 .button-nav {
-  border: 1px solid #C41A49;
+  border: 1px solid #c41a49;
   border-radius: 20px;
   text-align: center !important;
-  margin-right: 140px;
   padding: 0 5px;
+}
+
+.test1 {
+  display: flex;
+  align-items: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-item {
+  margin-right: 80px;
 }

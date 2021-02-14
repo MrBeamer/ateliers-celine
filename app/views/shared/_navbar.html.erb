@@ -1,4 +1,5 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon nav-own">
+<div class="test1"> 
   <div navbar-space>
     <%= link_to "/", class: "navbar-brand" do %>
     <%= image_tag "https://res.cloudinary.com/dxdboxbyb/image/upload/v1606156054/atelier-celine/jublitpripa5ijbpcoxt.jpg", class: "nav-img" %>
@@ -8,6 +9,8 @@
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
+  </div>
+  <div class="test2"> 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
@@ -49,5 +52,7 @@
         </li>
       <% end %>
     </ul>
+    </div>
+
   </div>
 </div>
