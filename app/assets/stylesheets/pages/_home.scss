@@ -3,7 +3,7 @@
   background-size: cover;
   background-position: center;
   flex-direction: column;
-  height: 100vh ;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11,21 +11,18 @@
 
 .center h5 {
   font-size: 36px;
-  color: #455CC7;
+  color: #455cc7;
   margin-top: 90px;
   margin-bottom: 20px;
 }
 
-
-
 //video
-.overlay h1{
-  text-align:center;
-  color: #FFFFFF;
+.overlay h1 {
+  text-align: center;
+  color: #ffffff;
   font-size: 50px;
   margin-bottom: 23px;
 }
-
 
 video {
   object-fit: cover;
@@ -35,29 +32,29 @@ video {
   left: 0;
 }
 
-.video-box\ { position:relative; }
+.video-box\ {
+  position: relative;
+}
 .video-box video {
-    position:relative;
-    z-index:0;
+  position: relative;
+  z-index: 0;
 }
 .overlay {
-    position:absolute;
-    top: 81px;
-    left: 420px;
-    z-index:3;
+  position: absolute;
+  top: 10%;
+  left: 30%;
+  z-index: 3;
 }
 
-
 .gradient {
-  height: 100vh ;
-  position:absolute;
+  height: 100vh;
+  position: absolute;
   top: 90px;
   left: 0px;
-  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3));
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
   width: 100%;
   z-index: 2;
 }
-
 
 //below video
 
@@ -73,11 +70,9 @@ video {
   margin-left: 250px;
 }
 
-
 .landing-page-text {
   font-size: 24px;
 }
-
 
 // cards
 .home-cards {
@@ -122,7 +117,6 @@ video {
   }
 }
 
-
 .home-card {
   background-size: cover;
   background-position: center;
@@ -133,11 +127,10 @@ video {
   color: white;
   font-size: 24px;
   font-weight: bold;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
-
 
 .home-card p {
   margin-left: 20px;
@@ -148,7 +141,6 @@ video {
   margin-left: 20px;
 }
 
-
 .carousel-item {
   position: relative;
   img {
@@ -157,9 +149,8 @@ video {
   }
 }
 
-
 .filter {
-  background-color: rgba(0,0,0,0.3);
+  background-color: rgba(0, 0, 0, 0.3);
   position: absolute;
   height: 600px;
   width: 100%;
@@ -172,8 +163,8 @@ video {
   padding: 3rem;
   background: rgba(255, 255, 255, 0.9);
   h1 {
-   color: #455CC7;
-   font-weight: bolder;
+    color: #455cc7;
+    font-weight: bolder;
   }
 }
 
@@ -193,7 +184,6 @@ video {
     width: 100px;
   }
   p {
-
     text-align: center;
   }
 }
@@ -206,7 +196,6 @@ video {
   top: 3.7rem;
   left: 14.5rem;
 }
-
 
 .button-bottom-home {
   margin-bottom: 90px;
